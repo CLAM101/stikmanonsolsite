@@ -1,0 +1,84 @@
+<div
+  class="no-scrollbar flex flex-col h-auto overflow-auto"
+  id="main-container"
+>
+  <div
+    #home
+    name="home"
+    class="flex w-full h-screen bg-customGreen shadow-md"
+    id="home"
+  >
+    <div class="h-1/4 flex flex-row w-full bg-customGreen shadow-md">
+      <div class="w-1/4 align-middle flex text-center items-center">
+        <img src="../../../assets/images/image-removebg-preview.png" alt="" />
+        <h1
+          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text"
+        >
+          St1kman on Sol
+        </h1>
+      </div>
+      <button
+        (click)="scrollToSection(home)"
+        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+      >
+        Home
+      </button>
+      <button
+        (click)="scrollToSection(about)"
+        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+      >
+        About
+      </button>
+      <button
+        (click)="scrollToSection(howtobuy)"
+        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+      >
+        How To Buy
+      </button>
+      <button
+        (click)="scrollToSection(tokenomics)"
+        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+      >
+        Tokenomics
+      </button>
+      <button
+        (click)="scrollToSection(roadmap)"
+        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+      >
+        Roadmap
+      </button>
+    </div>
+  </div>
+  <div
+    #about
+    name="about"
+    class="flex w-full h-screen font-oswaldregular bg-customGreen shadow-md"
+    id="about"
+  >
+    <h1>About</h1>
+  </div>
+  <div
+    #howtobuy
+    name="how-to-buy"
+    class="flex w-full h-screen bg-customGreen shadow-md"
+    id="how-to-buy"
+  >
+    <h1>How To Buy</h1>
+  </div>
+  <div
+    #tokenomics
+    name="tokenomics"
+    class="flex w-full h-screen bg-customGreen shadow-md"
+    id="tokenomics"
+  >
+    <h1>Tokenomics</h1>
+  </div>
+  <div
+    #roadmap
+    name="roadmap"
+    class="flex w-full h-screen bg-customGreen shadow-md"
+    id="roadmap"
+  >
+    <h1>Roadmap</h1>
+  </div>
+</div>

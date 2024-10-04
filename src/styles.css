@@ -1,1 +1,188 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @font-face {
+    font-family: "oswaldregular";
+    src: url("./assets/fonts/Oswald-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "oswaldbold";
+    src: url("./assets/fonts/Oswald-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "oswaldextralight";
+    src: url("./assets/fonts/Oswald-ExtraLight.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "oswaldlight";
+    src: url("./assets/fonts/Oswald-ExtraLight.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "oswaldmedium";
+    src: url("./assets/fonts/Oswald-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "oswaldsemibold";
+    src: url("./assets/fonts/Oswald-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "oswaldvariable";
+    src: url("./assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .large-heading-text {
+    @apply select-none  font-black leading-normal text-black;
+  }
+
+  .medium-heading-text {
+    @apply select-none text-3xl font-black;
+  }
+
+  .small-heading-text {
+    @apply select-none text-2xl font-black;
+  }
+
+  .paragraph-text {
+    @apply font-black leading-normal text-black;
+  }
+
+  .border-background {
+    @apply border-only bg-yellow-300 bg-opacity-85;
+  }
+
+  .border-only {
+    @apply rounded-md border-zinc-950;
+  }
+
+  .all-center {
+    @apply items-center justify-center text-center;
+  }
+
+  .all-start {
+    @apply items-start justify-start text-start;
+  }
+
+  .all-end {
+    @apply items-end justify-end;
+  }
+
+  .flex-col-set {
+    @apply flex flex-col;
+  }
+
+  .flex-row-set {
+    @apply flex flex-row;
+  }
+
+  @screen xs {
+    .large-heading-text {
+      @apply text-lg;
+    }
+    .medium-heading-text {
+      @apply select-none text-sm font-black;
+    }
+
+    .small-heading-text {
+      @apply select-none text-xs font-black;
+    }
+    .paragraph-text {
+      @apply text-3xs;
+    }
+    .border-only {
+      @apply border-4;
+    }
+  }
+
+  @screen sm {
+    .large-heading-text {
+      @apply text-xl;
+    }
+    .medium-heading-text {
+      @apply select-none text-sm font-black;
+    }
+    .small-heading-text {
+      @apply select-none text-xs font-black;
+    }
+    .paragraph-text {
+      @apply text-3xs;
+    }
+  }
+
+  @screen md {
+    .large-heading-text {
+      @apply text-2xl;
+    }
+    .medium-heading-text {
+      @apply select-none text-lg font-black;
+    }
+
+    .small-heading-text {
+      @apply select-none text-base font-black;
+    }
+    .paragraph-text {
+      @apply text-sm;
+    }
+  }
+
+  @screen lg {
+    .large-heading-text {
+      @apply text-3xl;
+    }
+    .medium-heading-text {
+      @apply select-none text-xl font-black;
+    }
+
+    .small-heading-text {
+      @apply select-none text-lg font-black;
+    }
+    .paragraph-text {
+      @apply text-base;
+    }
+  }
+
+  @screen xl {
+    .large-heading-text {
+      @apply text-4xl;
+    }
+    .medium-heading-text {
+      @apply select-none text-2xl font-black;
+    }
+
+    .small-heading-text {
+      @apply select-none text-xl font-black;
+    }
+    .paragraph-text {
+      @apply text-base;
+    }
+  }
+
+  @screen xxl {
+    .large-heading-text {
+      @apply text-7xl;
+    }
+    .medium-heading-text {
+      @apply select-none text-2xl font-black;
+    }
+
+    .small-heading-text {
+      @apply select-none text-xl font-black;
+    }
+    .paragraph-text {
+      @apply text-base;
+    }
+  }
+}
