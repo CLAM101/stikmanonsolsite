@@ -5,35 +5,45 @@
   <div
     #home
     name="home"
-    class="flex w-full h-screen bg-customGreen shadow-md"
+    class="flex flex-col w-full h-screen shadow-md"
     id="home"
   >
-    <div class="h-1/4 flex flex-row w-full bg-customGreen shadow-md">
-      <div class="w-1/3 align-middle flex text-center items-center">
-        <img src="../../../assets/images/image-removebg-preview.png" alt="" />
+    <div class="h-1/6 flex flex-row w-full shadow-md">
+      <div
+        class="w-1/3 align-middle flex flex-col text-center items-center justify-center"
+      >
         <h1
-          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text"
+          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text italic ml-7"
         >
-          St1kman on Sol
+          St1kman on $Sol
+        </h1>
+        <h1
+          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text italic ml-7"
+        >
+          $STIK
         </h1>
       </div>
       <button
         (click)="scrollToSection(home)"
         class="w-1/6 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple mr-7"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Home</h1>
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
+          Home
+        </h1>
       </button>
       <button
         (click)="scrollToSection(about)"
         class="w-1/6 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple mr-7"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">About</h1>
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
+          About
+        </h1>
       </button>
       <button
         (click)="scrollToSection(howtobuy)"
         class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           How To Buy
         </h1>
       </button>
@@ -41,7 +51,7 @@
         (click)="scrollToSection(tokenomics)"
         class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           Tokenomics
         </h1>
       </button>
@@ -49,14 +59,44 @@
         (click)="scrollToSection(roadmap)"
         class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Roadmap</h1>
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
+          Roadmap
+        </h1>
       </button>
+    </div>
+    <div
+      class="h-3/4 w-full align-middle text-center justify-center flex flex-col"
+    >
+      <div
+        class="h-1/2 w-full align-middle text-center justify-center flex flex-col"
+      >
+        <h1
+          class="large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular mb-5"
+        >
+          St1kman on $SOL
+        </h1>
+        <h1
+          class="large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular"
+        >
+          $SOl to 1K
+        </h1>
+      </div>
+
+      <div
+        class="w-full h-1/2 flex flex-col justify-center text-center align-middle items-center"
+      >
+        <img
+          class="h-90 w-40"
+          src="../../../assets/images/image-removebg-preview.png"
+          alt=""
+        />
+      </div>
     </div>
   </div>
   <div
     #about
     name="about"
-    class="flex w-full h-screen font-oswaldregular bg-customGreen shadow-md"
+    class="flex w-full h-screen font-oswaldregular shadow-md"
     id="about"
   >
     <h1>About</h1>
@@ -64,7 +104,7 @@
   <div
     #howtobuy
     name="how-to-buy"
-    class="flex w-full h-screen bg-customGreen shadow-md"
+    class="flex w-full h-screen shadow-md"
     id="how-to-buy"
   >
     <h1>How To Buy</h1>
@@ -72,7 +112,7 @@
   <div
     #tokenomics
     name="tokenomics"
-    class="flex w-full h-screen bg-customGreen shadow-md"
+    class="flex w-full h-screen shadow-md"
     id="tokenomics"
   >
     <h1>Tokenomics</h1>
@@ -80,7 +120,7 @@
   <div
     #roadmap
     name="roadmap"
-    class="flex w-full h-screen bg-customGreen shadow-md"
+    class="flex w-full h-screen shadow-md"
     id="roadmap"
   >
     <h1>Roadmap</h1>

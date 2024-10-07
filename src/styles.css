@@ -109,7 +109,7 @@
 
   @screen sm {
     .large-heading-text {
-      @apply text-xl;
+      @apply text-2xl;
     }
     .medium-heading-text {
       @apply select-none text-sm font-black;
@@ -124,7 +124,7 @@
 
   @screen md {
     .large-heading-text {
-      @apply text-2xl;
+      @apply text-3xl;
     }
     .medium-heading-text {
       @apply select-none text-lg font-black;
@@ -140,7 +140,7 @@
 
   @screen lg {
     .large-heading-text {
-      @apply text-3xl;
+      @apply text-4xl;
     }
     .medium-heading-text {
       @apply select-none text-xl font-black;
@@ -156,7 +156,7 @@
 
   @screen xl {
     .large-heading-text {
-      @apply text-4xl;
+      @apply text-5xl;
     }
     .medium-heading-text {
       @apply select-none text-2xl font-black;
