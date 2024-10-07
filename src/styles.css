@@ -172,7 +172,7 @@
 
   @screen xxl {
     .large-heading-text {
-      @apply text-7xl;
+      @apply text-6xl;
     }
     .medium-heading-text {
       @apply select-none text-2xl font-black;

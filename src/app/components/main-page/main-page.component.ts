@@ -12,7 +12,7 @@ export class MainPageComponent {
   constructor(private router: Router) {}
 
   scrollToSection(el: HTMLElement) {
-    el.scrollIntoView();
+    el.scrollIntoView({ behavior: 'smooth' });
     console.log('Scrolling to ' + el.getAttribute('name'));
   }
 }
