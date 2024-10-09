@@ -65,25 +65,29 @@
       </button>
     </div>
     <div
-      class="h-3/4 w-full align-middle text-center justify-center flex flex-col"
+      class="h-3/4 w-full align-middle text-center justify-center flex flex-col duration-1000"
     >
       <div
-        class="h-1/2 w-full align-middle text-center justify-center flex flex-col"
+        #myElement
+        class="h-1/2 w-full align-middle flex flex-col text-center justify-center items-center"
       >
         <h1
-          class="large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular mb-5"
+          class="w-2/6 large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular mb-5 -translate-x-120 duration-1000"
+          [ngClass]="{ 'translate-x-5': isInView }"
         >
           St1kman on $SOL
         </h1>
         <h1
-          class="large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular"
+          class="w-1/6 large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular translate-x-120 duration-1000 mt-9"
+          [ngClass]="{ '-translate-x-5': isInView }"
         >
           $SOl to 1K
         </h1>
       </div>
 
       <div
-        class="w-full h-1/2 flex flex-col justify-center text-center align-middle items-center"
+        class="w-full h-1/2 flex flex-col justify-center text-center align-middle items-center translate-y-60 duration-1000"
+        [ngClass]="{ 'translate-y-5': isInView }"
       >
         <img
           class="h-90 w-40"
