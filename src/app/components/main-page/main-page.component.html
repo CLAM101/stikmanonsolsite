@@ -1,39 +1,30 @@
 <div
-  class="no-scrollbar flex flex-col h-auto overflow-auto"
+  class="no-scrollbar flex flex-col h-auto overflow-auto bg-black"
   id="main-container"
 >
   <div
     #home
     name="home"
-    class="flex flex-col w-full h-screen shadow-md"
+    class="flex flex-col w-full h-screen bg-black shadow-lg shadow-white"
     id="home"
   >
-    <div class="h-1/6 flex flex-row w-full shadow-md">
+    <div class="h-1/6 flex flex-row w-full shadow-lg shadow-white">
       <div
-        class="w-1/3 align-middle flex flex-col text-center items-center justify-center"
+        type="button"
+        (click)="scrollToSection(home)"
+        class="w-30% align-middle flex flex-col text-center items-center justify-center"
       >
-        <h1
-          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text italic ml-7"
-        >
+        <h1 class="font-norwester font-bold large-heading-text italic ml-7">
           St1kman on $Sol
         </h1>
-        <h1
-          class="text-stroke-purple text-shadow-purple font-oswaldregular font-bold large-heading-text italic ml-7"
-        >
+        <h1 class="font-norwester font-bold large-heading-text italic ml-7">
           $STIK
         </h1>
       </div>
-      <button
-        (click)="scrollToSection(home)"
-        class="w-1/6 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple mr-7"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
-          Home
-        </h1>
-      </button>
+
       <button
         (click)="scrollToSection(about)"
-        class="w-1/6 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple mr-7"
+        class="w-10% font-norwester font-bold large-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           About
@@ -41,7 +32,7 @@
       </button>
       <button
         (click)="scrollToSection(howtobuy)"
-        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+        class="w-1/5 font-norwester font-bold large-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           How To Buy
@@ -49,7 +40,7 @@
       </button>
       <button
         (click)="scrollToSection(tokenomics)"
-        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+        class="w-1/5 font-norwester font-bold large-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           Tokenomics
@@ -57,48 +48,67 @@
       </button>
       <button
         (click)="scrollToSection(roadmap)"
-        class="w-1/5 font-oswaldregular font-bold large-heading-text text-stroke-purple text-shadow-purple"
+        class="w-1/5 font-norwester font-bold large-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
           Roadmap
         </h1>
       </button>
     </div>
-    <div class="h-3/4 w-full text-center flex flex-col justify-start">
-      <div
-        #myElement
-        class="h-1/2 w-full align-middle flex flex-col text-center justify-center items-center"
+    <div
+      class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
+    >
+      <h1
+        class="w-2/6 large-heading-text italic font-bold font-norwester -translate-x-120 duration-1500 mb-5"
+        [ngClass]="{ 'translate-x-5': isInView }"
       >
-        <h1
-          class="w-2/6 large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular mb-5 -translate-x-120 duration-1000"
-          [ngClass]="{ 'translate-x-5': isInView }"
-        >
-          St1kman on $SOL
-        </h1>
-        <h1
-          class="w-1/6 large-heading-text italic font-bold text-stroke-purple text-shadow-purple font-oswaldregular translate-x-120 duration-1000 mt-9"
-          [ngClass]="{ 'translate-x-5': isInView }"
-        >
-          $SOl to 1K
-        </h1>
-      </div>
+        St1kman on $SOL
+      </h1>
+      <h1
+        class="w-1/6 large-heading-text italic font-bold font-norwester translate-x-120 duration-1500"
+        [ngClass]="{ 'translate-x-5': isInView }"
+      >
+        $SOl to 1K
+      </h1>
 
-      <div
-        class="w-full h-1/2 flex flex-col justify-center text-center align-middle items-center duration-1000"
-        [ngClass]="{ 'translate-y-0': isInView }"
-      >
-        <img
-          class="h-90 w-40"
-          src="../../../assets/images/image-removebg-preview.png"
-          alt=""
-        />
+      <div class="flex flex-row w-full justify-between">
+        <div
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-1000 h-50vh min-w-40vh"
+          [ngClass]="{ 'translate-y-5': isInView }"
+        >
+          <img
+            class="w-full h-full"
+            src="../../../assets/images/hey jump.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-2000 h-50vh min-w-40vh"
+          [ngClass]="{ 'translate-y-5': isInView }"
+        >
+          <img
+            class="w-full h-full"
+            src="../../../assets/images/direct_point_grimace.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-3000 h-50vh min-w-40vh"
+          [ngClass]="{ 'translate-y-5': isInView }"
+        >
+          <img
+            class="w-full h-full"
+            src="../../../assets/images/hand_out_happy_.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   </div>
   <div
     #about
     name="about"
-    class="flex w-full h-screen font-oswaldregular shadow-md"
+    class="flex w-full h-screen font-norwester shadow-lg shadow-white"
     id="about"
   >
     <h1>About</h1>
@@ -106,7 +116,7 @@
   <div
     #howtobuy
     name="how-to-buy"
-    class="flex w-full h-screen shadow-md"
+    class="flex w-full h-screen shadow-lg shadow-white"
     id="how-to-buy"
   >
     <h1>How To Buy</h1>
@@ -114,7 +124,7 @@
   <div
     #tokenomics
     name="tokenomics"
-    class="flex w-full h-screen shadow-md"
+    class="flex w-full h-screen shadow-lg shadow-white"
     id="tokenomics"
   >
     <h1>Tokenomics</h1>
@@ -122,7 +132,7 @@
   <div
     #roadmap
     name="roadmap"
-    class="flex w-full h-screen shadow-md"
+    class="flex w-full h-screen shadow-lg shadow-white"
     id="roadmap"
   >
     <h1>Roadmap</h1>

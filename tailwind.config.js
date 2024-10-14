@@ -12,6 +12,14 @@ module.exports = {
     },
 
     extend: {
+      // transition durations up to 3000
+      transitionDuration: {
+        1500: "1500ms",
+        2000: "2000ms",
+        2500: "2500ms",
+        3000: "3000ms",
+      },
+
       fontFamily: {
         oswaldregular: ["oswaldregular", "sans-serif"],
         oswaldbold: ["oswaldbold", "sans-serif"],
@@ -20,6 +28,7 @@ module.exports = {
         oswaldmedium: ["oswaldmedium", "sans-serif"],
         oswaldsemibold: ["oswaldsemibold", "sans-serif"],
         oswaldvariable: ["oswaldvariable", "sans-serif"],
+        norwester: ["norwester", "sans-serif"],
       },
 
       colors: {
@@ -206,6 +215,7 @@ module.exports = {
       const newUtilities = {
         ".text-shadow-purple": {
           textShadow: "3px 3px 8px #00CAE0", // Blue glow
+          color: "#ffffff",
         },
         ".text-stroke-purple": {
           "-webkit-text-stroke": "0.2px #A755E9", // Custom purple stroke

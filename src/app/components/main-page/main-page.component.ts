@@ -33,6 +33,6 @@ export class MainPageComponent {
     // Trigger the transition after the view has been initialized
     setTimeout(() => {
       this.isInView = true;
-    }, 300); // Optional delay to ensure smooth rendering
+    }, 500); // Optional delay to ensure smooth rendering
   }
 }

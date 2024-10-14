@@ -33,6 +33,11 @@
     font-family: "oswaldvariable";
     src: url("./assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "norwester";
+    src: url("./assets/fonts/norwester.ttf") format("truetype");
+  }
 }
 
 @layer utilities {
@@ -44,8 +49,12 @@
     scrollbar-width: none;
   }
 
+  .backgroundImage {
+    background-image: url("./assets/images/background.webp");
+  }
+
   .large-heading-text {
-    @apply select-none  font-black leading-normal text-black;
+    @apply select-none  font-black leading-normal text-white;
   }
 
   .medium-heading-text {
