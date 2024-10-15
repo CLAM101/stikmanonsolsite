@@ -75,6 +75,7 @@
         [ngClass]="{ 'translate-x-5': isInView }"
       >
         <svg
+          *ngIf="!playingAudio"
           class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
           type="button"
           (click)="pauseOrPlayAudio()"
@@ -92,6 +93,27 @@
             fill="none"
           />
           <polygon points="40,30 75,50 40,70" fill="#fff" />
+        </svg>
+        <svg
+          *ngIf="playingAudio"
+          class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
+          type="button"
+          (click)="pauseOrPlayAudio()"
+          width="150"
+          height="150"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="48"
+            stroke="#fff"
+            stroke-width="4"
+            fill="none"
+          />
+          <rect x="35" y="30" width="10" height="40" fill="#fff" />
+          <rect x="55" y="30" width="10" height="40" fill="#fff" />
         </svg>
         <h1 class="medium-heading-text font-norwester">
           Play that Stickman Fire

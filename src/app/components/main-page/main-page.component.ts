@@ -21,7 +21,7 @@ export class MainPageComponent {
   constructor(private router: Router) {}
 
   isInView: boolean = false;
-  playingAudio: boolean = true;
+  playingAudio: boolean = false;
   @ViewChild('myElement') myElement!: ElementRef;
 
   @ViewChild('audioElement') audioElement!: ElementRef;
