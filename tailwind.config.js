@@ -32,8 +32,7 @@ module.exports = {
       },
 
       colors: {
-        customPurple: "#00CAE0",
-        customGreen: "#00CAE0",
+        solanaPurple: "#C084FC",
       },
 
       fontSize: {

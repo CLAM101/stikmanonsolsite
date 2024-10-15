@@ -2,6 +2,13 @@
   class="no-scrollbar flex flex-col h-auto overflow-auto bg-black"
   id="main-container"
 >
+  <audio #audioElement>
+    <source
+      src="../../../assets/audio/Cave walls to the digital age...mp3"
+      type="audio/mpeg"
+    />
+    Your browser does not support the audio element.
+  </audio>
   <div
     #home
     name="home"
@@ -14,66 +21,86 @@
         (click)="scrollToSection(home)"
         class="w-30% align-middle flex flex-col text-center items-center justify-center"
       >
-        <h1 class="font-norwester font-bold large-heading-text italic ml-7">
-          St1kman on $Sol
-        </h1>
-        <h1 class="font-norwester font-bold large-heading-text italic ml-7">
-          $STIK
-        </h1>
+        <h1 class="font-norwester large-heading-text ml-7">St1kman on $Sol</h1>
+        <h1 class="font-norwester large-heading-text ml-7">$STIK</h1>
       </div>
 
       <button
         (click)="scrollToSection(about)"
-        class="w-10% font-norwester font-bold large-heading-text"
+        class="w-10% font-norwester large-heading-text"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
-          About
-        </h1>
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">About</h1>
       </button>
       <button
         (click)="scrollToSection(howtobuy)"
-        class="w-1/5 font-norwester font-bold large-heading-text"
+        class="w-1/5 font-norwester large-heading-text"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
           How To Buy
         </h1>
       </button>
       <button
         (click)="scrollToSection(tokenomics)"
-        class="w-1/5 font-norwester font-bold large-heading-text"
+        class="w-1/5 font-norwester large-heading-text"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
           Tokenomics
         </h1>
       </button>
       <button
         (click)="scrollToSection(roadmap)"
-        class="w-1/5 font-norwester font-bold large-heading-text"
+        class="w-1/5 font-norwester large-heading-text"
       >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity italic">
-          Roadmap
-        </h1>
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Roadmap</h1>
       </button>
     </div>
     <div
       class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
     >
-      <h1
-        class="w-2/6 large-heading-text italic font-bold font-norwester -translate-x-120 duration-1500 mb-5"
+      <!-- <h1
+        class="w-2/6 large-heading-text   font-norwester -translate-x-120 duration-1500 mb-5"
         [ngClass]="{ 'translate-x-5': isInView }"
       >
         St1kman on $SOL
       </h1>
       <h1
-        class="w-1/6 large-heading-text italic font-bold font-norwester translate-x-120 duration-1500"
+        class="w-1/6 large-heading-text   font-norwester translate-x-120 duration-1500"
         [ngClass]="{ 'translate-x-5': isInView }"
       >
         $SOl to 1K
-      </h1>
+      </h1> -->
 
-      <div class="flex flex-row w-full justify-between">
+      <div
+        class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500 mr-6"
+        [ngClass]="{ 'translate-x-5': isInView }"
+      >
+        <svg
+          class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
+          type="button"
+          (click)="pauseOrPlayAudio()"
+          width="150"
+          height="150"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="48"
+            stroke="#fff"
+            stroke-width="4"
+            fill="none"
+          />
+          <polygon points="40,30 75,50 40,70" fill="#fff" />
+        </svg>
+        <h1 class="medium-heading-text font-norwester">
+          Play that Stickman Fire
+        </h1>
+      </div>
+
+      <div class="flex flex-row w-full justify-between h-45vh">
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-1000 h-50vh min-w-40vh"
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-1000 h-45vh min-w-50vh"
           [ngClass]="{ 'translate-y-5': isInView }"
         >
           <img
@@ -83,7 +110,7 @@
           />
         </div>
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-2000 h-50vh min-w-40vh"
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-2000 h-45vh min-w-50vh"
           [ngClass]="{ 'translate-y-5': isInView }"
         >
           <img
@@ -93,7 +120,7 @@
           />
         </div>
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-3000 h-50vh min-w-40vh"
+          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-3000 h-45vh min-w-50vh"
           [ngClass]="{ 'translate-y-5': isInView }"
         >
           <img

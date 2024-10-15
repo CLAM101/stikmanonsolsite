@@ -21,7 +21,10 @@ export class MainPageComponent {
   constructor(private router: Router) {}
 
   isInView: boolean = false;
+  playingAudio: boolean = true;
   @ViewChild('myElement') myElement!: ElementRef;
+
+  @ViewChild('audioElement') audioElement!: ElementRef;
 
   // @HostListener('window:scroll', ['$event'])
   scrollToSection(el: HTMLElement) {
@@ -29,10 +32,37 @@ export class MainPageComponent {
     console.log('Scrolling to ' + el.getAttribute('name'));
   }
 
+  // ngOnInit() {
+  //   this.playAudio();
+  // }
+
   ngAfterViewInit() {
     // Trigger the transition after the view has been initialized
     setTimeout(() => {
       this.isInView = true;
     }, 500); // Optional delay to ensure smooth rendering
+  }
+
+  pauseOrPlayAudio() {
+    if (this.playingAudio) {
+      this.pauseAudio();
+    } else {
+      this.playAudio();
+    }
+  }
+
+  playAudio() {
+    const audio = this.audioElement.nativeElement as HTMLAudioElement;
+    audio.play().catch((error) => {
+      // Handle autoplay restrictions (like in mobile browsers)
+      console.error('Audio autoplay failed:', error);
+    });
+    this.playingAudio = true;
+  }
+
+  pauseAudio() {
+    const audio = this.audioElement.nativeElement as HTMLAudioElement;
+    audio.pause();
+    this.playingAudio = false;
   }
 }

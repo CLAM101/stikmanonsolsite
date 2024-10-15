@@ -58,7 +58,7 @@
   }
 
   .medium-heading-text {
-    @apply select-none text-3xl font-black;
+    @apply select-none text-3xl  text-white;
   }
 
   .small-heading-text {
