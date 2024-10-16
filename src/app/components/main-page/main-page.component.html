@@ -12,36 +12,52 @@
   <div
     #home
     name="home"
-    class="flex flex-col w-full h-screen bg-black shadow-lg shadow-white"
+    class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
     id="home"
   >
-    <div class="h-1/6 flex flex-row w-full shadow-lg shadow-white">
+    <div class="h-10% flex flex-row w-full shadow-lg shadow-white">
       <div
         type="button"
         (click)="scrollToSection(home)"
-        class="w-30% align-middle flex flex-col text-center items-center justify-center"
+        class="w-1/6 align-middle flex flex-col text-center items-center justify-center"
       >
-        <h1 class="font-norwester large-heading-text ml-7">St1kman on $SOL</h1>
-        <h1 class="font-norwester large-heading-text ml-7">$STIK</h1>
+        <h1 class="font-norwester medium-heading-text ml-7">St1kman on $SOL</h1>
+        <h1 class="font-norwester medium-heading-text ml-7">$STIK</h1>
       </div>
 
       <button
-        (click)="scrollToSection(about)"
-        class="w-10% font-norwester large-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">About</h1>
-      </button>
-      <button
         (click)="scrollToSection(howtobuy)"
-        class="w-1/5 font-norwester large-heading-text"
+        class="w-1/6 font-norwester medium-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">
           How To Buy
         </h1>
       </button>
       <button
+        (click)="scrollToSection(socials)"
+        class="w-1/6% font-norwester medium-heading-text w-1/6"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Socials</h1>
+      </button>
+      <button
+        (click)="scrollToSection(creatorhub)"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+          Creator Hub
+        </h1>
+      </button>
+      <button
+        (click)="scrollToSection(memecenter)"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+          Meme Center
+        </h1>
+      </button>
+      <button
         (click)="scrollToSection(tokenomics)"
-        class="w-1/5 font-norwester large-heading-text"
+        class="w-1/6 font-norwester medium-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">
           Tokenomics
@@ -49,27 +65,20 @@
       </button>
       <button
         (click)="scrollToSection(roadmap)"
-        class="w-1/5 font-norwester large-heading-text"
+        class="w-1/6 font-norwester medium-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">Roadmap</h1>
+      </button>
+      <button
+        (click)="scrollToSection(games)"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Games</h1>
       </button>
     </div>
     <div
       class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
     >
-      <!-- <h1
-        class="w-2/6 large-heading-text   font-norwester -translate-x-120 duration-1500 mb-5"
-        [ngClass]="{ 'translate-x-5': isInView }"
-      >
-        St1kman on $SOL
-      </h1>
-      <h1
-        class="w-1/6 large-heading-text   font-norwester translate-x-120 duration-1500"
-        [ngClass]="{ 'translate-x-5': isInView }"
-      >
-        $SOl to 1K
-      </h1> -->
-
       <div
         class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500 mr-6"
         [ngClass]="{ 'translate-x-5': isInView }"
@@ -155,25 +164,87 @@
     </div>
   </div>
   <div
-    #about
-    name="about"
-    class="flex w-full h-screen font-norwester shadow-lg shadow-white"
-    id="about"
+    #howtobuy
+    name="howtobuy"
+    class="flex flex-col justify-evenly items-center w-full h-screen font-norwester shadow-lg shadow-white backgroundImage"
+    id="howtobuy"
   >
-    <h1>About</h1>
+    <div
+      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
+    >
+      <h1 class="font-norwester medium-heading-text">
+        Create a wallet, we recommend Phantom Wallet.
+      </h1>
+
+      <div class="flex flex-col w-full h-1/2 items-center justify-evenly">
+        <a href="https://phantom.app/" target="_blank">
+          <img
+            type="button"
+            class="h-5vh w-10vh"
+            src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
+            alt=""
+        /></a>
+
+        <h1 class="font-norwester medium-heading-text">
+          Click to Download Phantom Wallet
+        </h1>
+      </div>
+    </div>
+    <div
+      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
+    >
+      <h1 class="font-norwester medium-heading-text p-5">
+        Get some $SOL this can be done on andy major exchange like Binance,
+        Coinbase etc. Once you have purchased your $SOL send it to the address
+        of your newly created wallet.
+      </h1>
+    </div>
+    <div
+      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
+    >
+      <h1 class="font-norwester medium-heading-text">
+        Go to Jupiter exchange and swap your $SOL for $ST1K. You will simply
+        need to go to the Jupiter website, connect your phantom wallet, paste
+        the address of $ST1K into Jupiter and select $Sol as the other token to
+        exchange.
+      </h1>
+    </div>
+    <div
+      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
+    >
+      <h1 class="font-norwester medium-heading-text">
+        Swap your $SOL for $ST1k and prepare to go to Valhalla! .
+      </h1>
+    </div>
   </div>
   <div
-    #howtobuy
-    name="how-to-buy"
-    class="flex w-full h-screen shadow-lg shadow-white"
-    id="how-to-buy"
+    #socials
+    name="socials"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    id="socials"
   >
-    <h1>How To Buy</h1>
+    <h1>Socials</h1>
+  </div>
+  <div
+    #creatorhub
+    name="creatorhub"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    id="creatorhub"
+  >
+    <h1>Creator Hub</h1>
+  </div>
+  <div
+    #memecenter
+    name="memecenter"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    id="memecenter"
+  >
+    <h1>Meme Center</h1>
   </div>
   <div
     #tokenomics
     name="tokenomics"
-    class="flex w-full h-screen shadow-lg shadow-white"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="tokenomics"
   >
     <h1>Tokenomics</h1>
@@ -181,9 +252,17 @@
   <div
     #roadmap
     name="roadmap"
-    class="flex w-full h-screen shadow-lg shadow-white"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="roadmap"
   >
     <h1>Roadmap</h1>
+  </div>
+  <div
+    #games
+    name="games"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    id="games"
+  >
+    <h1>Games</h1>
   </div>
 </div>
