@@ -1,0 +1,16 @@
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6"
+>
+  <div
+    class="flex flex-col items-center text-center"
+    *ngFor="let image of images"
+  >
+    <img
+      (click)="downloadImage(image.url, image.name + '.jpg')"
+      type="button"
+      [src]="image.url"
+      [alt]="image.name"
+      class="h-35vh w-45vh rounded-lg shadow-lg mb-4"
+    />
+  </div>
+</div>

@@ -62,7 +62,7 @@
   }
 
   .small-heading-text {
-    @apply select-none text-2xl font-black;
+    @apply select-none text-2xl text-white;
   }
 
   .paragraph-text {

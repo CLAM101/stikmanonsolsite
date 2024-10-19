@@ -7,13 +7,21 @@
       src="../../../assets/audio/Cave walls to the digital age...mp3"
       type="audio/mpeg"
     />
-    Your browser does not support the audio element.
   </audio>
+  <audio #voAudioElement>
+    <source
+      src="../../../assets/audio/st1kman intro voiceover.mp3"
+      type="audio/mpeg"
+    />
+  </audio>
+
   <div
     #home
     name="home"
     class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
     id="home"
+    appIsInView
+    (inView)="inViewHandler($event, 'home')"
   >
     <div class="h-10% flex flex-row w-full shadow-lg shadow-white">
       <div
@@ -25,14 +33,6 @@
         <h1 class="font-norwester medium-heading-text ml-7">$STIK</h1>
       </div>
 
-      <button
-        (click)="scrollToSection(howtobuy)"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          How To Buy
-        </h1>
-      </button>
       <button
         (click)="scrollToSection(socials)"
         class="w-1/6% font-norwester medium-heading-text w-1/6"
@@ -75,13 +75,22 @@
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">Games</h1>
       </button>
+
+      <button
+        (click)="scrollToSection(howtobuy)"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+          How To Buy
+        </h1>
+      </button>
     </div>
     <div
       class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
     >
       <div
         class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500 mr-6"
-        [ngClass]="{ 'translate-x-5': isInView }"
+        [ngClass]="{ 'translate-x-5': inViews.home }"
       >
         <svg
           *ngIf="!playingAudio"
@@ -131,8 +140,8 @@
 
       <div class="flex flex-row w-full justify-between h-45vh">
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-1000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': isInView }"
+          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-45vh min-w-50vh"
+          [ngClass]="{ 'translate-y-1': inViews.home }"
         >
           <img
             class="w-full h-full"
@@ -141,8 +150,8 @@
           />
         </div>
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-2000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': isInView }"
+          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-2000 h-45vh min-w-50vh"
+          [ngClass]="{ 'translate-y-1': inViews.home }"
         >
           <img
             class="w-full h-full"
@@ -151,8 +160,8 @@
           />
         </div>
         <div
-          class="flex flex-col justify-center text-center translate-y-120 align-middle items-center duration-3000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': isInView }"
+          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-3000 h-45vh min-w-50vh"
+          [ngClass]="{ 'translate-y-1': inViews.home }"
         >
           <img
             class="w-full h-full"
@@ -163,65 +172,14 @@
       </div>
     </div>
   </div>
-  <div
-    #howtobuy
-    name="howtobuy"
-    class="flex flex-col justify-evenly items-center w-full h-screen font-norwester shadow-lg shadow-white backgroundImage"
-    id="howtobuy"
-  >
-    <div
-      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
-    >
-      <h1 class="font-norwester medium-heading-text">
-        Create a wallet, we recommend Phantom Wallet.
-      </h1>
 
-      <div class="flex flex-col w-full h-1/2 items-center justify-evenly">
-        <a href="https://phantom.app/" target="_blank">
-          <img
-            type="button"
-            class="h-5vh w-10vh"
-            src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
-            alt=""
-        /></a>
-
-        <h1 class="font-norwester medium-heading-text">
-          Click to Download Phantom Wallet
-        </h1>
-      </div>
-    </div>
-    <div
-      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
-    >
-      <h1 class="font-norwester medium-heading-text p-5">
-        Get some $SOL this can be done on andy major exchange like Binance,
-        Coinbase etc. Once you have purchased your $SOL send it to the address
-        of your newly created wallet.
-      </h1>
-    </div>
-    <div
-      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
-    >
-      <h1 class="font-norwester medium-heading-text">
-        Go to Jupiter exchange and swap your $SOL for $ST1K. You will simply
-        need to go to the Jupiter website, connect your phantom wallet, paste
-        the address of $ST1K into Jupiter and select $Sol as the other token to
-        exchange.
-      </h1>
-    </div>
-    <div
-      class="h-1/6 w-1/2 shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center"
-    >
-      <h1 class="font-norwester medium-heading-text">
-        Swap your $SOL for $ST1k and prepare to go to Valhalla! .
-      </h1>
-    </div>
-  </div>
   <div
     #socials
     name="socials"
     class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="socials"
+    appIsInView
+    (inView)="inViewHandler($event, 'socials')"
   >
     <h1>Socials</h1>
   </div>
@@ -230,22 +188,28 @@
     name="creatorhub"
     class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="creatorhub"
+    appIsInView
+    (inView)="inViewHandler($event, 'creatorhub')"
   >
     <h1>Creator Hub</h1>
   </div>
   <div
     #memecenter
     name="memecenter"
-    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    class="flex flex-col justify-center items-center w-full h-screen shadow-lg shadow-white backgroundImage"
     id="memecenter"
+    appIsInView
+    (inView)="inViewHandler($event, 'memecenter')"
   >
-    <h1>Meme Center</h1>
+    <app-image-grid></app-image-grid>
   </div>
   <div
     #tokenomics
     name="tokenomics"
     class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="tokenomics"
+    appIsInView
+    (inView)="inViewHandler($event, 'tokenomics')"
   >
     <h1>Tokenomics</h1>
   </div>
@@ -254,15 +218,92 @@
     name="roadmap"
     class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
     id="roadmap"
+    appIsInView
+    (inView)="inViewHandler($event, 'roadmap')"
   >
     <h1>Roadmap</h1>
   </div>
   <div
     #games
     name="games"
-    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    class="flex w-full h-screen shadow-lg shadow-white backgroundImage flex-col justify-center items-center"
     id="games"
+    appIsInView
+    (inView)="inViewHandler($event, 'games')"
   >
-    <h1>Games</h1>
+    <app-game-embed></app-game-embed>
+  </div>
+  <div
+    #howtobuy
+    name="howtobuy"
+    class="flex flex-col w-full h-screen font-norwester shadow-lg shadow-white backgroundImage items-center"
+    id="howtobuy"
+    appIsInView
+    (inView)="inViewHandler($event, 'howToBuy')"
+  >
+    <div class="flex flex-col h-full w-3/4 justify-evenly items-center">
+      <div
+        class="flex flex-col h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black justify-center items-center text-center -translate-x-130 duration-1000"
+        [ngClass]="{
+          'translate-x-0': inViews.howToBuy,
+          'translate-x-130': !inViews.howToBuy
+        }"
+      >
+        <div class="flex flex-col w-full items-center justify-center">
+          <a href="https://phantom.app/" target="_blank">
+            <img
+              class="h-5vh w-15vh"
+              src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
+              alt=""
+          /></a>
+          <h1 class="font-norwester medium-heading-text p-5">
+            Create a wallet, we recommend Phantom Wallet.
+          </h1>
+        </div>
+      </div>
+      <div
+        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2000"
+        [ngClass]="{
+          'translate-x-0': inViews.howToBuy,
+          'translate-x-130': !inViews.howToBuy
+        }"
+      >
+        <h1 class="font-norwester medium-heading-text p-5">
+          Get some $SOL this can be done on andy major exchange like Binance,
+          Coinbase etc. Once you have purchased your $SOL send it to the address
+          of your newly created wallet.
+        </h1>
+      </div>
+      <div
+        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2500"
+        [ngClass]="{
+          'translate-x-0': inViews.howToBuy,
+          'translate-x-130': !inViews.howToBuy
+        }"
+      >
+        <a href="https://jup.ag/" target="_blank">
+          <img
+            class="h-5vh w-5vw"
+            src="../../../assets/images/jupiter-logo/Jupiter Logo/logowithtext-dark.svg"
+            alt=""
+        /></a>
+        <h1 class="font-norwester medium-heading-text p-5">
+          Go to the Jupiter website, connect your phantom wallet, paste the
+          address of $ST1K into Jupiter and select $SOL as the other token to
+          exchange.
+        </h1>
+      </div>
+      <div
+        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-3000"
+        [ngClass]="{
+          'translate-x-0': inViews.howToBuy,
+          'translate-x-130': !inViews.howToBuy
+        }"
+      >
+        <h1 class="font-norwester medium-heading-text p-5">
+          Swap your $SOL for $ST1k and prepare for Valhalla! .
+        </h1>
+      </div>
+    </div>
   </div>
 </div>
