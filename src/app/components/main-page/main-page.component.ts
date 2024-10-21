@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 import { IsInViewDirective } from '../../directives/is-in-view.directive';
 import { ImageGridComponent } from '../image-grid/image-grid.component';
 import { GameEmbedComponent } from '../game-embed/game-embed.component';
+import { BaseChartDirective } from 'ng2-charts';
+import { ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-main-page',
@@ -22,6 +24,7 @@ import { GameEmbedComponent } from '../game-embed/game-embed.component';
     IsInViewDirective,
     ImageGridComponent,
     GameEmbedComponent,
+    BaseChartDirective,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
@@ -52,6 +55,29 @@ export class MainPageComponent {
 
   playingAudio: boolean = false;
   playingVoAudio: boolean = false;
+  pieChartData = {
+    labels: ['Marketing', 'Collabs', 'Liquidity', 'Presale'],
+    datasets: [
+      {
+        label: 'Percentage',
+        data: [5, 5, 5, 85],
+        backgroundColor: ['#ffff', '#14F195', '#000000', '#9945FF'],
+        hoverOffset: 4,
+      },
+    ],
+  };
+  pieChartOptions: ChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Stikman Token Distribution',
+      },
+    },
+  };
 
   @ViewChild('myElement') myElement!: ElementRef;
 
@@ -103,11 +129,11 @@ export class MainPageComponent {
         this.pauseAudio();
       }
 
-      Object.keys(this.inViews).forEach((key) => {
-        if (key !== location) {
-          this.inViews[key as keyof typeof this.inViews] = false;
-        }
-      });
+      // Object.keys(this.inViews).forEach((key) => {
+      //   if (key !== location) {
+      //     this.inViews[key as keyof typeof this.inViews] = false;
+      //   }
+      // });
     }
   }
 
