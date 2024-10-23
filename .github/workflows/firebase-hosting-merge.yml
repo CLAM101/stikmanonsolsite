@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js and NPM
         uses: actions/setup-node@v2
         with:
-          node-version: 18.13.0
+          node-version: 20.0.0
 
       - name: Install dependencies and run the start script
         run: |
