@@ -113,21 +113,13 @@ export class MainPageComponent {
     if (inView) {
       this.inViews[location] = true;
 
-      if (location === 'memecenter' && !this.playingVoAudio) {
-        this.playVoAudio();
-      }
+      // if (location === 'memecenter' && !this.playingVoAudio) {
+      //   this.playVoAudio();
+      // }
 
-      if (location !== 'memecenter' && this.playingVoAudio) {
-        this.pauseVoAudio();
-      }
-
-      if (location === 'home' && !this.playingAudio) {
-        this.playAudio();
-      }
-
-      if (location !== 'home' && this.playingAudio) {
-        this.pauseAudio();
-      }
+      // if (location !== 'memecenter' && this.playingVoAudio) {
+      //   this.pauseVoAudio();
+      // }
 
       // Object.keys(this.inViews).forEach((key) => {
       //   if (key !== location) {

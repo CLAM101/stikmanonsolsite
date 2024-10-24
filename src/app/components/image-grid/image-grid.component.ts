@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // For *ngFor, *ngIf directives
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Import DomSanitizer
 
 @Component({
   selector: 'app-image-grid',
@@ -34,9 +35,112 @@ export class ImageGridComponent {
       url: '../../../assets/images/memes/caveman-fucking-meme.png',
       name: 'Image 1',
     },
+    {
+      url: '../../../assets/images/memes/degen-gasses-purple.png',
+      name: 'Image 1',
+    },
+    {
+      url: '../../../assets/images/memes/degen-glasses-orange.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/group-photo-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/strip-club-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/caveman-fucking-meme.png',
+      name: 'Image 1',
+    },
+    {
+      url: '../../../assets/images/memes/degen-gasses-purple.png',
+      name: 'Image 1',
+    },
+    {
+      url: '../../../assets/images/memes/degen-glasses-orange.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/group-photo-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/strip-club-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/caveman-fucking-meme.png',
+      name: 'Image 1',
+    },
+    {
+      url: '../../../assets/images/memes/degen-gasses-purple.png',
+      name: 'Image 1',
+    },
+    {
+      url: '../../../assets/images/memes/degen-glasses-orange.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/group-photo-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/strip-club-meme.png',
+      name: 'Image 1',
+    },
+    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
+    {
+      url: '../../../assets/images/memes/caveman-fucking-meme.png',
+      name: 'Image 1',
+    },
 
     // Add more images as needed
   ];
+  constructor(private sanitizer: DomSanitizer) {} //
+
+  photopeaURL!: SafeResourceUrl;
+  showMemeEditor = false;
+
+  ngOnInit() {
+    this.photopeaURL = this.sanitizeUrl(this.constructPotopeaURL());
+  }
+
+  constructPotopeaURL() {
+    const config = {
+      files: ['https://jumpshare.com/s/oq7XNsNjE9XN7VuRWDl7'],
+    };
+
+    // Encode JSON to a URL-safe string
+    const encodedConfig = encodeURIComponent(JSON.stringify(config));
+
+    // Construct the full URL
+    const photopeaUrl = `https://www.photopea.com#${encodedConfig}`;
+
+    return photopeaUrl;
+  }
+
+  openStikEditor() {
+    this.showMemeEditor = true;
+  }
+
+  openMemeGrid() {
+    this.showMemeEditor = false;
+  }
+
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
   // Method to download an image
   downloadImage(url: string, name: string) {

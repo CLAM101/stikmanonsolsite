@@ -168,12 +168,46 @@
   <div
     #memecenter
     name="memecenter"
-    class="flex flex-col justify-center items-center w-full h-screen shadow-lg shadow-white backgroundImage"
+    class="flex flex-row w-full h-screen shadow-lg shadow-white backgroundImage"
     id="memecenter"
     appIsInView
     (inView)="inViewHandler($event, 'memecenter')"
   >
-    <app-image-grid></app-image-grid>
+    <div class="w-1/2 flex flex-col h-full justify-evenly">
+      <h1 class="large-heading-text font-norwester font-bold">
+        Meme Center and Creator Hub
+      </h1>
+      <p class="small-heading-text font-norwester p-5">
+        Aight, check this—St1kman been runnin’ the game since cavemen were
+        scratchin’ stories on walls, tellin' tales by firelight. From there,
+        it’s been flipbooks in classrooms, kids creatin’ their own wild stories,
+        and now here we are in the digital age, and it’s still all about
+        storytelling. And guess what? St1kman’s been here for all of it—ain't
+        stoppin' now!
+      </p>
+      <p class="small-heading-text font-norwester p-5">
+        We’re makin’ sure every creator out there has a shot to keep St1kman’s
+        story rollin'. Whether you’re droppin' memes, makin' vids, or flippin'
+        GIFs, you’re part of this history. And yeah, we got meme battles, video
+        comps, and maybe even some juicy rewards comin' for those who show up
+        and keep the St1kman legacy alive.
+      </p>
+      <p class="small-heading-text font-norwester p-5">
+        It ain’t about a select few, nah—everyone gets in on this. We’ll be
+        droppin' some collabs, spaces, and some next-level stuff soon, so get
+        ready. But for now, we’re tellin' you to download what you need—GIMP,
+        Blender, whatever tool you got—grab those St1kman files from here, and
+        start creatin’, sharin’, and buildin’ this legend, aint no limits, your
+        all g’. And don’t worry, the real homies that keep it goin’? They’re
+        gettin' those rewards. We see you, and St1kman sees you, too. We’re
+        ridin' through time, and this story ain’t slowin' down!
+      </p>
+    </div>
+    <div class="w-1/2 flex flex-col h-full justify-center">
+      <div class="flex flex-col w-full h-90% overflow-y-scroll">
+        <app-image-grid></app-image-grid>
+      </div>
+    </div>
   </div>
   <div
     #tokenomics
