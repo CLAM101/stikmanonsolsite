@@ -1,35 +1,43 @@
-<div class="h-full w-full p-6">
-  <button class="medium-heading-text font-norwester" (click)="openMemeGrid()">
-    Download Memes
-  </button>
-  <button class="medium-heading-text font-norwester" (click)="openStikEditor()">
-    Create Your St1kman
-  </button>
-
-  <div *ngIf="!showMemeEditor">
-    <div
-      class="flex flex-col items-center text-center"
-      *ngFor="let image of images"
+<div class="h-screen w-full flex flex-col justify-start">
+  <div class="h-15% w-full flex flex-row justify-evenly items-center">
+    <button
+      class="large-heading-text h-50% font-norwester p-5 flex items-center"
+      (click)="openMemeGrid()"
     >
+      Download Memes
+    </button>
+    <button
+      class="large-heading-text h-50% font-norwester p-5 flex items-center"
+      (click)="openStikEditor()"
+    >
+      Create Your St1kman
+    </button>
+  </div>
+
+  <div
+    *ngIf="!showMemeEditor"
+    class="w-full h-85% grid grid-cols-3 overflow-y-scroll"
+  >
+    <div class="items-center text-center p-8" *ngFor="let image of images">
       <img
         (click)="downloadImage(image.url, image.name + '.jpg')"
         type="button"
         [src]="image.url"
         [alt]="image.name"
-        class="h-20vh w-45vh rounded-lg shadow-lg mb-4"
+        class="h-20vh w-40vh rounded-lg shadow-lg mb-4"
       />
     </div>
   </div>
 
   <div
     *ngIf="showMemeEditor"
-    class="flex flex-col items-center text-center w-full"
+    class="flex flex-col h-85% items-center text-center w-full"
   >
     <iframe
       [src]="photopeaURL"
       frameborder="0"
-      width="800px"
-      height="800px"
+      width="1200px"
+      height="720px"
     ></iframe>
   </div>
 </div>

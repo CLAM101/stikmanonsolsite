@@ -118,7 +118,9 @@ export class ImageGridComponent {
 
   constructPotopeaURL() {
     const config = {
-      files: ['https://jumpshare.com/s/oq7XNsNjE9XN7VuRWDl7'],
+      files: [
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/SM01%20(1).psd?alt=media&token=edc8e6ac-9494-4831-be10-a8ff35ddb6d6',
+      ],
     };
 
     // Encode JSON to a URL-safe string
