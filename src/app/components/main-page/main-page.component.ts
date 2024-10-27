@@ -129,6 +129,29 @@ export class MainPageComponent {
     }
   }
 
+  roadMapPanels = [
+    {
+      title: 'Phase 1',
+      content: 'Launch of Stikman Token',
+      icon: 'fas fa-rocket',
+    },
+    {
+      title: 'Phase 2',
+      content: 'Launch of Stikman NFTs',
+      icon: 'fas fa-rocket',
+    },
+    {
+      title: 'Phase 3',
+      content: 'Launch of Stikman Games',
+      icon: 'fas fa-rocket',
+    },
+    {
+      title: 'Phase 4',
+      content: 'Launch of Stikman Creator Hub',
+      icon: 'fas fa-rocket',
+    },
+  ];
+
   pauseOrPlayAudio() {
     if (this.playingAudio) {
       this.pauseAudio();

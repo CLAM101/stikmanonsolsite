@@ -9,6 +9,11 @@
   }
 
   @font-face {
+    font-family: "robotomonobold";
+    src: url("./assets/fonts/RobotoMono-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
     font-family: "oswaldbold";
     src: url("./assets/fonts/Oswald-Bold.ttf") format("truetype");
   }

@@ -21,6 +21,7 @@ module.exports = {
       },
 
       fontFamily: {
+        robotomonobold: ["robotomonobold", "sans-serif"],
         oswaldregular: ["oswaldregular", "sans-serif"],
         oswaldbold: ["oswaldbold", "sans-serif"],
         oswaldextralight: ["oswaldextralight", "sans-serif"],

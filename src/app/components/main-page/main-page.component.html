@@ -174,7 +174,9 @@
     (inView)="inViewHandler($event, 'memecenter')"
   >
     <div class="w-1/3 flex flex-col h-full justify-evenly">
-      <h1 class="large-heading-text font-norwester font-bold">Creator Hub</h1>
+      <h1 class="large-heading-text font-norwester font-bold p-3">
+        Creator Hub
+      </h1>
       <p class="small-heading-text font-norwester p-5">
         Aight, check this—St1kman been runnin’ the game since cavemen were
         scratchin’ stories on walls, tellin' tales by firelight. From there,
@@ -272,12 +274,24 @@
   <div
     #roadmap
     name="roadmap"
-    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+    class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
     id="roadmap"
     appIsInView
     (inView)="inViewHandler($event, 'roadmap')"
   >
-    <h1>Roadmap</h1>
+    <div class="w-full h-10% font-norwester large-heading-text p-5">
+      <h1>Roadmap</h1>
+    </div>
+    <div class="w-full h-90% grid grid-cols-2">
+      <div *ngFor="let x of roadMapPanels" class="h-30vh p-10 w-full">
+        <div
+          class="h-90% w-90% shadow-md shadow-white border-4 rounded-full bg-black flex flex-col justify-center items-center text-center"
+        >
+          <h1 class="medium-heading-text font-norwester">{{ x.title }}</h1>
+          <h2 class="medium-heading-text font-norwester">{{ x.content }}</h2>
+        </div>
+      </div>
+    </div>
   </div>
   <div
     #games
@@ -345,6 +359,7 @@
               src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
               alt=""
           /></a>
+
           <h1 class="font-norwester medium-heading-text p-5">
             Create a wallet, we recommend Phantom Wallet.
           </h1>
@@ -370,17 +385,33 @@
          
         }"
       >
-        <a href="https://jup.ag/" target="_blank">
-          <img
-            class="h-5vh w-5vw"
-            src="../../../assets/images/jupiter-logo/Jupiter Logo/logowithtext-dark.svg"
-            alt=""
-        /></a>
-        <h1 class="font-norwester medium-heading-text p-5">
-          Go to the Jupiter website, connect your phantom wallet, paste the
-          address of $ST1K into Jupiter and select $SOL as the other token to
-          exchange.
-        </h1>
+        <div class="flex flex-row w-full h-1/2 justify-center p-2">
+          <a href="https://jup.ag/" target="_blank">
+            <img
+              class="h-10vh w-5vw"
+              src="../../../assets/images/jupiter-logo/Jupiter Logo/logowithtext-dark.svg"
+              alt=""
+          /></a>
+          <a href="https://raydium.io/swap/" target="_blank">
+            <div class="h-10vh w-5vw pl-16 flex flex-row">
+              <img
+                class="h-10vh w-5vw pl-16"
+                src="../../../assets/images/raydium-logo.webp"
+                alt=""
+              />
+              <h1 class="large-heading-text font-robotomonobold pt-5 pl-5">
+                Raydium
+              </h1>
+            </div>
+          </a>
+        </div>
+        <div class="flex flex-col h-1/2 w-full">
+          <h1 class="font-norwester medium-heading-text p-5">
+            Go to the Jupiter or Raydium websites, connect your phantom wallet,
+            paste the address of $ST1K into the swap panel and select $SOL as
+            the other token to exchange.
+          </h1>
+        </div>
       </div>
       <div
         class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-3000"
