@@ -34,12 +34,10 @@
       <button (click)="clicked()" mat-button [matMenuTriggerFor]="menu">
         <h1 class="font-norwester large-heading-text ml-7">MENU</h1>
       </button>
-      <div class="flex flex-col text-center items-center justify-center">
-        <h1 class="font-norwester medium-heading-text">
-          St1kman on $SOL $STIK
-        </h1>
+      <div class="flex flex-col text-center items-center justify-center pr-10">
+        <h1 class="font-norwester large-heading-text">St1kman on $SOL $STIK</h1>
       </div>
-      <mat-menu #menu="matMenu" class="pt-20">
+      <mat-menu #menu="matMenu" class="pt-26 pl-5" yPosition="below">
         <button
           mat-menu-item
           (click)="scrollToSection(memecenter)"
@@ -170,8 +168,11 @@
       class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
     >
       <div
-        class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500 mr-6"
-        [ngClass]="{ 'translate-x-5': inViews.home }"
+        class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500"
+        [ngClass]="{
+          'translate-x-5': inViews.home && !isSmallScreen,
+          'translate-x-0': inViews.home && isSmallScreen
+        }"
       >
         <svg
           *ngIf="!playingVideo"
@@ -214,12 +215,15 @@
           <rect x="35" y="30" width="10" height="40" fill="#fff" />
           <rect x="55" y="30" width="10" height="40" fill="#fff" />
         </svg>
-        <h1 class="medium-heading-text font-norwester">
+        <h1 class="large-heading-text font-norwester">
           Play That AI Generated Stickman Fire
         </h1>
       </div>
 
-      <div class="flex flex-row w-full justify-between h-45vh">
+      <div
+        *ngIf="!isSmallScreen"
+        class="flex flex-row w-full justify-between h-45vh"
+      >
         <div
           class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-45vh min-w-50vh"
           [ngClass]="{ 'translate-y-5': inViews.home }"
