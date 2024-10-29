@@ -15,6 +15,9 @@ import { ImageGridComponent } from '../image-grid/image-grid.component';
 import { GameEmbedComponent } from '../game-embed/game-embed.component';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartOptions } from 'chart.js';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-main-page',
@@ -25,12 +28,26 @@ import { ChartOptions } from 'chart.js';
     ImageGridComponent,
     GameEmbedComponent,
     BaseChartDirective,
+    MatButtonModule,
+    MatMenuModule,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
 })
 export class MainPageComponent {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private breakpointObserver: BreakpointObserver
+  ) {
+    this.breakpointObserver
+      .observe([Breakpoints.XSmall])
+      .subscribe((result) => {
+        this.isSmallScreen = result.matches;
+        this.handleScreenChange(result.matches);
+      });
+  }
+
+  isSmallScreen: boolean = false;
 
   inViews: {
     [key in
@@ -53,7 +70,7 @@ export class MainPageComponent {
     howToBuy: false,
   };
 
-  playingAudio: boolean = false;
+  playingVideo: boolean = false;
   playingVoAudio: boolean = false;
   pieChartData = {
     labels: ['Marketing', 'Collabs', 'Liquidity', 'Presale'],
@@ -80,23 +97,28 @@ export class MainPageComponent {
   };
 
   @ViewChild('myElement') myElement!: ElementRef;
+  @ViewChild('videoElement') videoElement!: ElementRef;
 
-  @ViewChild('audioElement') audioElement!: ElementRef;
   @ViewChild('voAudioElement') voAudioElement!: ElementRef;
 
-  // @HostListener('window:scroll', ['$event'])
   scrollToSection(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
     console.log('Scrolling to ' + el.getAttribute('name'));
   }
 
+  handleScreenChange(isSmallScreen: boolean) {
+    console.log('Screen changed to ' + isSmallScreen);
+  }
+
+  clicked() {
+    console.log('clicked');
+  }
+
   // ngOnInit() {
-  //   this.playAudio();
+
   // }
 
-  // ngAfterViewInit() {
-  //   // Trigger the transition after the view has been initialized
-  // }
+  //ngAfterViewInit() {}
 
   inViewHandler(
     inView: boolean,
@@ -152,12 +174,31 @@ export class MainPageComponent {
     },
   ];
 
-  pauseOrPlayAudio() {
-    if (this.playingAudio) {
-      this.pauseAudio();
+  pauseOrPlayVideo() {
+    if (this.playingVideo) {
+      this.pauseVideo();
     } else {
-      this.playAudio();
+      this.playVideo();
     }
+  }
+
+  isOpen = false;
+
+  playVideo() {
+    const video = this.videoElement.nativeElement as HTMLVideoElement;
+    video.loop = true;
+
+    this.playingVideo = true;
+    video.play().catch((error) => {
+      this.playingVideo = false;
+      console.error('Video autoplay failed:', error);
+    });
+  }
+
+  pauseVideo() {
+    const video = this.videoElement.nativeElement as HTMLVideoElement;
+    video.pause();
+    this.playingVideo = false;
   }
 
   playVoAudio() {
@@ -173,19 +214,5 @@ export class MainPageComponent {
     const audio = this.voAudioElement.nativeElement as HTMLAudioElement;
     audio.pause();
     this.playingVoAudio = false;
-  }
-
-  playAudio() {
-    const audio = this.audioElement.nativeElement as HTMLAudioElement;
-    this.playingAudio = true;
-    audio.play().catch((error) => {
-      this.playingAudio = false;
-    });
-  }
-
-  pauseAudio() {
-    const audio = this.audioElement.nativeElement as HTMLAudioElement;
-    audio.pause();
-    this.playingAudio = false;
   }
 }

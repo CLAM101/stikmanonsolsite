@@ -58,6 +58,10 @@
     background-image: url("./assets/images/2\ \(1\).png");
   }
 
+  .backgroundGangster {
+    background-image: url("./assets/video/st1kman\ and\ gansters.mp4");
+  }
+
   .large-heading-text {
     @apply select-none  font-black leading-normal text-white;
   }
@@ -200,3 +204,6 @@
     }
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

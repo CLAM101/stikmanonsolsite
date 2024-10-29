@@ -1,13 +1,7 @@
 <div
-  class="no-scrollbar flex flex-col h-auto overflow-auto bg-black"
+  class="no-scrollbar flex flex-col h-auto overflow-x-hidden overflow-y-scroll w-screen bg-black absolute z-0"
   id="main-container"
 >
-  <audio #audioElement>
-    <source
-      src="../../../assets/audio/Cave walls to the digital age...mp3"
-      type="audio/mpeg"
-    />
-  </audio>
   <audio #voAudioElement>
     <source
       src="../../../assets/audio/st1kman intro voiceover.mp3"
@@ -18,12 +12,107 @@
   <div
     #home
     name="home"
-    class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
+    class="flex flex-col h-screen w-screen shadow-lg shadow-white relative"
     id="home"
     appIsInView
     (inView)="inViewHandler($event, 'home')"
   >
-    <div class="h-10% flex flex-row w-full shadow-lg shadow-white">
+    <div class="absolute z-[-2] bg-gray-900 w-full h-full">
+      <video #videoElement class="w-full h-full opacity-20 object-cover">
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman%20ai%20vid%20edit%20720.mp4?alt=media&token=eea05230-b3d1-47e5-ac3a-641bdc40d762"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div
+      *ngIf="this.isSmallScreen"
+      class="h-10% flex flex-row w-full shadow-lg shadow-white justify-between"
+    >
+      <button (click)="clicked()" mat-button [matMenuTriggerFor]="menu">
+        <h1 class="font-norwester large-heading-text ml-7">MENU</h1>
+      </button>
+      <div class="flex flex-col text-center items-center justify-center">
+        <h1 class="font-norwester medium-heading-text">
+          St1kman on $SOL $STIK
+        </h1>
+      </div>
+      <mat-menu #menu="matMenu" class="pt-20">
+        <button
+          mat-menu-item
+          (click)="scrollToSection(memecenter)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Meme Center
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(tokenomics)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Tokenomics
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(roadmap)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Roadmap
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(games)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Games
+          </h1>
+        </button>
+
+        <button
+          mat-menu-item
+          (click)="scrollToSection(howtobuy)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            How To Buy
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(socials)"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Socials
+          </h1>
+        </button>
+      </mat-menu>
+    </div>
+    <div
+      *ngIf="!this.isSmallScreen"
+      class="h-10% flex flex-row w-full shadow-lg shadow-white"
+    >
       <div
         type="button"
         (click)="scrollToSection(home)"
@@ -85,10 +174,10 @@
         [ngClass]="{ 'translate-x-5': inViews.home }"
       >
         <svg
-          *ngIf="!playingAudio"
+          *ngIf="!playingVideo"
           class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
           type="button"
-          (click)="pauseOrPlayAudio()"
+          (click)="pauseOrPlayVideo()"
           width="150"
           height="150"
           viewBox="0 0 100 100"
@@ -105,10 +194,10 @@
           <polygon points="40,30 75,50 40,70" fill="#fff" />
         </svg>
         <svg
-          *ngIf="playingAudio"
+          *ngIf="playingVideo"
           class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
           type="button"
-          (click)="pauseOrPlayAudio()"
+          (click)="pauseOrPlayVideo()"
           width="150"
           height="150"
           viewBox="0 0 100 100"
@@ -126,7 +215,7 @@
           <rect x="55" y="30" width="10" height="40" fill="#fff" />
         </svg>
         <h1 class="medium-heading-text font-norwester">
-          Play that Stickman Fire
+          Play That AI Generated Stickman Fire
         </h1>
       </div>
 
@@ -435,6 +524,43 @@
     appIsInView
     (inView)="inViewHandler($event, 'socials')"
   >
-    <h1>Socials</h1>
+    <div class="grid grid-cols-2 w-full h-full">
+      <div class="flex flex-col justify-center items-center">
+        <a href="https://www.youtube.com/">
+          <img
+            class="h-15vh w-15vw"
+            src="../../../assets/images/youtube-logos/youtube_monochrome_logos/digital_and_tv/yt_logo_mono_dark.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <a href="https://x.com/home">
+          <img
+            class="h-20vh w-20vw"
+            src="../../../assets/images/x-logo (1)/logo-white.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <a href="https://www.tiktok.com/en/">
+          <img
+            class="h-20vh w-20vw"
+            src="../../../assets/images/tik-tok-logos/Dev Portal Logo Pack/TikTok Logo Pack/TikTok – Logo – PNG [CMYK]/Horizontal/TikTok-logo-CMYK-Horizontal-white.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <a href="https://telegram.org/">
+          <img
+            class="h-20vh w-20vw"
+            src="../../../assets/images/telegram-logos/Logo.svg"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
   </div>
 </div>
