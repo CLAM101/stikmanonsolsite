@@ -40,7 +40,7 @@ export class MainPageComponent {
     private breakpointObserver: BreakpointObserver
   ) {
     this.breakpointObserver
-      .observe([Breakpoints.XSmall])
+      .observe([Breakpoints.Handset, Breakpoints.Tablet])
       .subscribe((result) => {
         this.isSmallScreen = result.matches;
         this.handleScreenChange(result.matches);

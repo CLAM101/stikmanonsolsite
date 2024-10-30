@@ -12,12 +12,12 @@
   <div
     #home
     name="home"
-    class="flex flex-col h-screen w-screen shadow-lg shadow-white relative"
+    class="flex flex-col h-screen w-screen shadow-lg shadow-white relative overflow-hidden backgroundImage"
     id="home"
     appIsInView
     (inView)="inViewHandler($event, 'home')"
   >
-    <div class="absolute z-[-2] bg-gray-900 w-full h-full">
+    <div class="absolute z-[-2] w-full h-full">
       <video #videoElement class="w-full h-full opacity-20 object-cover">
         <source
           src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman%20ai%20vid%20edit%20720.mp4?alt=media&token=eea05230-b3d1-47e5-ac3a-641bdc40d762"
@@ -26,18 +26,32 @@
         Your browser does not support the video tag.
       </video>
     </div>
-
     <div
       *ngIf="this.isSmallScreen"
-      class="h-10% flex flex-row w-full shadow-lg shadow-white justify-between"
+      class="h-20% flex flex-row w-full shadow-lg shadow-white items-center bg-black backgroundImage opacity-80"
     >
-      <button (click)="clicked()" mat-button [matMenuTriggerFor]="menu">
-        <h1 class="font-norwester large-heading-text ml-7">MENU</h1>
-      </button>
-      <div class="flex flex-col text-center items-center justify-center pr-10">
-        <h1 class="font-norwester large-heading-text">St1kman on $SOL $STIK</h1>
+      <div class="h-full flex flex-row justify-between items-center w-full">
+        <img
+          class="h-20vh w-20vh flex p-5 ml-5%"
+          src="../../../assets/images/web-assets/stikman-banner-frame.png"
+          alt=""
+        />
+        <button
+          (click)="clicked()"
+          mat-button
+          [matMenuTriggerFor]="menu"
+          class="mr-10%"
+        >
+          <h1 class="font-norwester text-white text-6xl">MENU</h1>
+        </button>
       </div>
-      <mat-menu #menu="matMenu" class="pt-26 pl-5" yPosition="below">
+
+      <mat-menu
+        #menu="matMenu"
+        xPosition="after"
+        yPosition="below"
+        class="ml-3"
+      >
         <button
           mat-menu-item
           (click)="scrollToSection(memecenter)"
@@ -109,15 +123,18 @@
     </div>
     <div
       *ngIf="!this.isSmallScreen"
-      class="h-10% flex flex-row w-full shadow-lg shadow-white"
+      class="h-20% flex flex-row w-full shadow-lg shadow-white backgroundImage opacity-80"
     >
       <div
         type="button"
         (click)="scrollToSection(home)"
         class="w-1/6 align-middle flex flex-col text-center items-center justify-center"
       >
-        <h1 class="font-norwester medium-heading-text ml-7">St1kman on $SOL</h1>
-        <h1 class="font-norwester medium-heading-text ml-7">$STIK</h1>
+        <img
+          class="h-20vh w-20vh flex p-5"
+          src="../../../assets/images/web-assets/stikman-banner-frame.png"
+          alt=""
+        />
       </div>
 
       <button
@@ -165,8 +182,12 @@
       </button>
     </div>
     <div
-      class="h-3/4 w-full items-center flex flex-col justify-center text-center mt-5"
+      class="h-80% w-full items-center flex flex-col justify-center text-center overflow-hidden"
     >
+      <h1 class="medium-heading-text font-norwester pt-10 max-w-70%">
+        Made by degens for degens, no VC's or backers, created and made with a
+        small bunch of community peep's..
+      </h1>
       <div
         class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500"
         [ngClass]="{
@@ -176,7 +197,7 @@
       >
         <svg
           *ngIf="!playingVideo"
-          class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
+          class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
           type="button"
           (click)="pauseOrPlayVideo()"
           width="150"
@@ -196,7 +217,7 @@
         </svg>
         <svg
           *ngIf="playingVideo"
-          class="mb-7 opacity-100 hover:opacity-50 transition-opacity"
+          class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
           type="button"
           (click)="pauseOrPlayVideo()"
           width="150"
@@ -215,7 +236,7 @@
           <rect x="35" y="30" width="10" height="40" fill="#fff" />
           <rect x="55" y="30" width="10" height="40" fill="#fff" />
         </svg>
-        <h1 class="large-heading-text font-norwester">
+        <h1 class="medium-heading-text font-norwester">
           Play That AI Generated Stickman Fire
         </h1>
       </div>
@@ -251,6 +272,21 @@
           <img
             class="w-full h-full"
             src="../../../assets/images/hand_out_happy_.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        *ngIf="isSmallScreen"
+        class="flex flex-row w-full justify-center items-center h-45vh"
+      >
+        <div
+          class="flex flex-col justify-center text-center align-middle items-center h-45vh min-w-50vh"
+        >
+          <img
+            class="w-full h-full"
+            src="../../../assets/images/hey jump.png"
             alt=""
           />
         </div>

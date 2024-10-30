@@ -1,0 +1,14 @@
+::ng-deep .mat-menu-panel {
+  background-color: transparent !important;
+  box-shadow: none !important; /* Removes shadow */
+}
+
+::ng-deep .mat-menu-content {
+  backdrop-filter: blur(0px); /* Optional if you want a blur effect */
+  background-color: transparent !important; /* Ensures transparency */
+}
+
+::ng-deep .mat-menu-item {
+  background-color: transparent !important;
+  color: white; /* Adjust to your desired color */
+}
