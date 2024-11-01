@@ -62,8 +62,20 @@
     background-image: url("./assets/video/st1kman\ and\ gansters.mp4");
   }
 
+  .backgroundBlunt {
+    background-image: url("./assets/images/web-assets/Stikman\ hat\ blunt.png");
+  }
+
+  .layered-background {
+    background-image: url("./assets/images/2\ \(1\).png"),
+      url("./assets/images/web-assets/St1kman\ Gangsta\ Cut.png");
+    background-size: cover, contain; /* Adjust each image's size */
+    background-position: center, top; /* Position each image */
+    background-repeat: no-repeat, no-repeat; /* Control repetition */
+  }
+
   .large-heading-text {
-    @apply select-none  font-black leading-normal text-white;
+    @apply select-none  font-black  text-white;
   }
 
   .medium-heading-text {
@@ -75,7 +87,7 @@
   }
 
   .paragraph-text {
-    @apply font-black leading-normal text-black;
+    @apply font-black  text-black;
   }
 
   .border-background {
@@ -111,7 +123,7 @@
       @apply text-lg;
     }
     .medium-heading-text {
-      @apply select-none text-sm font-black;
+      @apply select-none text-lg font-black;
     }
 
     .small-heading-text {
@@ -130,7 +142,7 @@
       @apply text-2xl;
     }
     .medium-heading-text {
-      @apply select-none text-sm font-black;
+      @apply select-none text-lg font-black;
     }
     .small-heading-text {
       @apply select-none text-xs font-black;
@@ -145,7 +157,7 @@
       @apply text-3xl;
     }
     .medium-heading-text {
-      @apply select-none text-lg font-black;
+      @apply select-none text-xl font-black;
     }
 
     .small-heading-text {
@@ -161,7 +173,7 @@
       @apply text-4xl;
     }
     .medium-heading-text {
-      @apply select-none text-xl font-black;
+      @apply select-none text-2xl font-black;
     }
 
     .small-heading-text {
@@ -177,7 +189,7 @@
       @apply text-5xl;
     }
     .medium-heading-text {
-      @apply select-none text-2xl font-black;
+      @apply select-none text-3xl font-black;
     }
 
     .small-heading-text {
@@ -193,7 +205,7 @@
       @apply text-6xl;
     }
     .medium-heading-text {
-      @apply select-none text-2xl font-black;
+      @apply select-none text-3xl font-black;
     }
 
     .small-heading-text {

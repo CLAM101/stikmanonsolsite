@@ -109,37 +109,6 @@ export class ImageGridComponent {
   ];
   constructor(private sanitizer: DomSanitizer) {} //
 
-  photopeaURL!: SafeResourceUrl;
-  showMemeEditor = false;
-
-  ngOnInit() {
-    this.photopeaURL = this.sanitizeUrl(this.constructPotopeaURL());
-  }
-
-  constructPotopeaURL() {
-    const config = {
-      files: [
-        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/SM01%20(1).psd?alt=media&token=edc8e6ac-9494-4831-be10-a8ff35ddb6d6',
-      ],
-    };
-
-    // Encode JSON to a URL-safe string
-    const encodedConfig = encodeURIComponent(JSON.stringify(config));
-
-    // Construct the full URL
-    const photopeaUrl = `https://www.photopea.com#${encodedConfig}`;
-
-    return photopeaUrl;
-  }
-
-  openStikEditor() {
-    this.showMemeEditor = true;
-  }
-
-  openMemeGrid() {
-    this.showMemeEditor = false;
-  }
-
   sanitizeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }

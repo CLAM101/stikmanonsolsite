@@ -18,6 +18,7 @@ import { ChartOptions } from 'chart.js';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { CreatorHubComponent } from '../creator-hub/creator-hub.component';
 
 @Component({
   selector: 'app-main-page',
@@ -30,6 +31,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     BaseChartDirective,
     MatButtonModule,
     MatMenuModule,
+    CreatorHubComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
@@ -100,10 +102,15 @@ export class MainPageComponent {
   @ViewChild('videoElement') videoElement!: ElementRef;
 
   @ViewChild('voAudioElement') voAudioElement!: ElementRef;
+  @ViewChild('creatorHub') creatorHub!: CreatorHubComponent;
 
-  scrollToSection(el: HTMLElement) {
+  scrollToSection(el: HTMLElement, location?: string) {
     el.scrollIntoView({ behavior: 'smooth' });
     console.log('Scrolling to ' + el.getAttribute('name'));
+
+    if (location) {
+      this.creatorHub.scrollToSection(location);
+    }
   }
 
   handleScreenChange(isSmallScreen: boolean) {

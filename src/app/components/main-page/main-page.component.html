@@ -32,7 +32,7 @@
     >
       <div class="h-full flex flex-row justify-between items-center w-full">
         <img
-          class="h-20vh w-25vh flex p-5 ml-5%"
+          class="h-20vh w-25vh min-w-30 min-h-30 flex p-5 ml-5%"
           src="../../../assets/images/web-assets/stikman-banner-frame.png"
           alt=""
         />
@@ -50,17 +50,39 @@
         #menu="matMenu"
         xPosition="after"
         yPosition="below"
-        class="ml-3 mt-10"
+        class="mt-10"
       >
         <button
           mat-menu-item
-          (click)="scrollToSection(memecenter)"
+          (click)="scrollToSection(creatorhub, 'memecenter')"
           class="font-norwester"
         >
           <h1
             class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
           >
-            Meme Center
+            Creator Hub
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(creatorhub, '2deditor')"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            2D Editor
+          </h1>
+        </button>
+        <button
+          mat-menu-item
+          (click)="scrollToSection(creatorhub, 'downloadcenter')"
+          class="font-norwester"
+        >
+          <h1
+            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+          >
+            Downloads
           </h1>
         </button>
         <button
@@ -71,7 +93,7 @@
           <h1
             class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
           >
-            Tokenomics
+            Token Info
           </h1>
         </button>
         <button
@@ -138,11 +160,27 @@
       </div>
 
       <button
-        (click)="scrollToSection(memecenter)"
+        (click)="scrollToSection(creatorhub, 'memecenter')"
         class="w-1/6 font-norwester medium-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          Meme Center
+          Creator Hub
+        </h1>
+      </button>
+      <button
+        (click)="scrollToSection(creatorhub, '2deditor')"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+          2D Editor
+        </h1>
+      </button>
+      <button
+        (click)="scrollToSection(creatorhub, 'downloadcenter')"
+        class="w-1/6 font-norwester medium-heading-text"
+      >
+        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
+          Downloads
         </h1>
       </button>
       <button
@@ -150,7 +188,7 @@
         class="w-1/6 font-norwester medium-heading-text"
       >
         <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          Tokenomics
+          Token Info
         </h1>
       </button>
       <button
@@ -184,10 +222,6 @@
     <div
       class="h-80% w-full items-center flex flex-col justify-center text-center overflow-hidden"
     >
-      <h1 class="medium-heading-text font-norwester pt-10 max-w-70%">
-        Made by degens for degens, no VC's or backers, created and made with a
-        small bunch of community peep's..
-      </h1>
       <div
         class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500"
         [ngClass]="{
@@ -294,48 +328,10 @@
     </div>
   </div>
 
-  <div
-    #memecenter
-    name="memecenter"
-    class="flex flex-row w-full h-screen shadow-lg shadow-white backgroundImage"
-    id="memecenter"
-    appIsInView
-    (inView)="inViewHandler($event, 'memecenter')"
-  >
-    <div class="w-1/3 flex flex-col h-full justify-evenly">
-      <h1 class="large-heading-text font-norwester font-bold p-3">
-        Creator Hub
-      </h1>
-      <p class="small-heading-text font-norwester p-5">
-        Aight, check this—St1kman been runnin’ the game since cavemen were
-        scratchin’ stories on walls, tellin' tales by firelight. From there,
-        it’s been flipbooks in classrooms, kids creatin’ their own wild stories,
-        and now here we are in the digital age, and it’s still all about
-        storytelling. And guess what? St1kman’s been here for all of it—ain't
-        stoppin' now!
-      </p>
-      <p class="small-heading-text font-norwester p-5">
-        We’re makin’ sure every creator out there has a shot to keep St1kman’s
-        story rollin'. Whether you’re droppin' memes, makin' vids, or flippin'
-        GIFs, you’re part of this history. And yeah, we got meme battles, video
-        comps, and maybe even some juicy rewards comin' for those who show up
-        and keep the St1kman legacy alive.
-      </p>
-      <p class="small-heading-text font-norwester p-5">
-        It ain’t about a select few, nah—everyone gets in on this. We’ll be
-        droppin' some collabs, spaces, and some next-level stuff soon, so get
-        ready. But for now, we’re tellin' you to download what you need—GIMP,
-        Blender, whatever tool you got—grab those St1kman files from here, and
-        start creatin’, sharin’, and buildin’ this legend, aint no limits, your
-        all g’. And don’t worry, the real homies that keep it goin’? They’re
-        gettin' those rewards. We see you, and St1kman sees you, too. We’re
-        ridin' through time, and this story ain’t slowin' down!
-      </p>
-    </div>
-    <div class="w-2/3 flex flex-col h-full">
-      <app-image-grid></app-image-grid>
-    </div>
+  <div #creatorhub name="creatorhub" id="creatorhub">
+    <app-creator-hub #creatorHub></app-creator-hub>
   </div>
+
   <div
     #tokenomics
     name="tokenomics"
@@ -346,30 +342,10 @@
   >
     <div class="p-5 w-full h-full flex flex-col">
       <div class="h-1/4 w-full flex flex-col">
-        <h1 class="large-heading-text font-norwester font-bold">Tokenomics</h1>
-
-        <h3 class="small-heading-text font-norwester pt-3 pl-10 leading-loose">
-          Here’s how we’re breakin’ it down for all the degens out there. We
-          know you like to smash new coins and sometimes the snipers snipe but
-          lets say St1kman ain't just a meme; we’re makin’ moves with these
-          tokens, all while keepin’ it real with the community. We will be
-          making sure the best way we can to not rek any charts, and the homies
-          be lookin to use the LP to convert $ST1K to Usdc/Sol when need to help
-          bolster the liquidity and generate incooom. All project supply will be
-          held in recognised SNS addresses for future.. You will see them.
-        </h3>
+        <h1 class="large-heading-text font-norwester font-bold">Token Info</h1>
       </div>
 
       <div class="h-3/4 w-full flex flex-row items-end">
-        <div class="h-full w-1/2 flex flex-col justify-evenly">
-          <canvas
-            baseChart
-            [data]="pieChartData"
-            [options]="pieChartOptions"
-            [type]="'pie'"
-          >
-          </canvas>
-        </div>
         <div class="h-full w-1/2 flex flex-col justify-evenly">
           <p class="small-heading-text font-norwester">
             5% of Supply – Pumpin’ St1kman IP 5% is going to be locked and
