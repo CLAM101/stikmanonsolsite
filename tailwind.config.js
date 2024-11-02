@@ -12,6 +12,21 @@ module.exports = {
     },
 
     extend: {
+      animation: {
+        "infinite-scroll": "infinite-scroll 10s linear infinite",
+        "vertical-scroll": "vertical-scroll 10s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          to: { transform: "translateX(0)" },
+          from: { transform: "translateX(-100%)" },
+        },
+        "vertical-scroll": {
+          to: { transform: "translateY(0)" },
+          from: { transform: "translateY(-100%)" },
+        },
+      },
+
       // transition durations up to 3000
       transitionDuration: {
         1500: "1500ms",

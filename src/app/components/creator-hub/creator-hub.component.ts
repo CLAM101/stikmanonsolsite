@@ -3,11 +3,12 @@ import { ImageGridComponent } from '../image-grid/image-grid.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Import DomSanitizer
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { StikmanBorderComponent } from '../stikman-border/stikman-border.component';
 
 @Component({
   selector: 'app-creator-hub',
   standalone: true,
-  imports: [ImageGridComponent, CommonModule],
+  imports: [ImageGridComponent, CommonModule, StikmanBorderComponent],
   templateUrl: './creator-hub.component.html',
   styleUrl: './creator-hub.component.css',
 })

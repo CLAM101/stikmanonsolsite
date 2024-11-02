@@ -58,11 +58,11 @@
   id="2deditor"
   appIsInView
 >
-  <div class="flex flex-col w-full h-5%">
+  <div class="flex flex-col w-full h-10%">
     <h1 class="large-heading-text font-norwester p-5">2D St1kman Editor</h1>
   </div>
   <div
-    class="flex flex-col h-95% items-center justify-center text-center w-full overflow-y-scroll no-scrollbar"
+    class="flex flex-col h-90% items-center justify-center text-center w-full overflow-y-scroll no-scrollbar"
   >
     <iframe
       [src]="photopeaURL"
@@ -76,14 +76,24 @@
 <div
   #downloadcenter
   name="downloadcenter"
-  class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
+  class="flex flex-col w-full h-screen shadow-white backgroundImage overflow-y-scroll no-scrollbar"
   id="downloadcenter"
   appIsInView
 >
-  <div class="flex flex-col w-full h-5%">
+  <div class="flex flex-col w-full h-10%">
     <h1 class="large-heading-text font-norwester p-5">Download Center</h1>
   </div>
-  <div class="w-full flex flex-col h-95%">
-    <app-image-grid></app-image-grid>
+  <div class="w-full flex flex-row h-90% pt-8">
+    <div class="w-1/2 flex flex-col h-full">
+      <h1 class="medium-heading-text font-norwester">
+        Click To Download Creator Assets
+      </h1>
+    </div>
+    <div class="w-1/2 flex flex-col h-full">
+      <h1 class="medium-heading-text font-norwester">
+        Click To Download Memes
+      </h1>
+      <app-image-grid></app-image-grid>
+    </div>
   </div>
 </div>

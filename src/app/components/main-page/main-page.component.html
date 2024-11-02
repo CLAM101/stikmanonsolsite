@@ -1,582 +1,608 @@
 <div
-  class="no-scrollbar flex flex-col h-auto overflow-x-hidden overflow-y-scroll w-screen bg-black absolute z-0"
-  id="main-container"
+  class="w-screen h-auto flex flex-row overflow-hidden justify-between bg-black z-0"
 >
-  <audio #voAudioElement>
-    <source
-      src="../../../assets/audio/st1kman intro voiceover.mp3"
-      type="audio/mpeg"
-    />
-  </audio>
+  <div>
+    <app-stikman-border
+      class="z-10"
+      [horizontalInput]="false"
+    ></app-stikman-border>
+  </div>
 
   <div
-    #home
-    name="home"
-    class="flex flex-col h-screen w-screen shadow-lg shadow-white relative overflow-hidden backgroundImage"
-    id="home"
-    appIsInView
-    (inView)="inViewHandler($event, 'home')"
+    class="no-scrollbar flex flex-col h-auto overflow-x-hidden overflow-y-scroll w-[94%] bg-black relative z-0 rounded-md"
+    id="main-container"
   >
-    <div class="absolute z-[-2] w-full h-full">
-      <video #videoElement class="w-full h-full opacity-20 object-cover">
-        <source
-          src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman%20ai%20vid%20edit%20720.mp4?alt=media&token=eea05230-b3d1-47e5-ac3a-641bdc40d762"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <audio #voAudioElement>
+      <source
+        src="../../../assets/audio/st1kman intro voiceover.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <app-stikman-border [horizontalInput]="true"></app-stikman-border>
     <div
-      *ngIf="this.isSmallScreen"
-      class="h-20% flex flex-row w-full shadow-lg shadow-white items-center bg-black backgroundImage opacity-80"
+      #home
+      name="home"
+      class="flex flex-col h-screen w-screen shadow-lg shadow-white relative overflow-hidden backgroundImage"
+      id="home"
+      appIsInView
+      (inView)="inViewHandler($event, 'home')"
     >
-      <div class="h-full flex flex-row justify-between items-center w-full">
-        <img
-          class="h-20vh w-25vh min-w-30 min-h-30 flex p-5 ml-5%"
-          src="../../../assets/images/web-assets/stikman-banner-frame.png"
-          alt=""
-        />
-        <button
-          (click)="clicked()"
-          mat-button
-          [matMenuTriggerFor]="menu"
-          class="mr-10%"
-        >
-          <h1 class="font-norwester text-white text-6xl">MENU</h1>
-        </button>
+      <div class="absolute z-[-2] w-full h-full">
+        <video #videoElement class="w-full h-full opacity-20 object-cover">
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman%20ai%20vid%20edit%20720.mp4?alt=media&token=eea05230-b3d1-47e5-ac3a-641bdc40d762"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
-
-      <mat-menu
-        #menu="matMenu"
-        xPosition="after"
-        yPosition="below"
-        class="mt-10"
+      <div
+        *ngIf="this.isSmallScreen"
+        class="h-20% flex flex-row w-full shadow-lg shadow-white items-center bg-black backgroundImage opacity-80"
       >
-        <button
-          mat-menu-item
-          (click)="scrollToSection(creatorhub, 'memecenter')"
-          class="font-norwester"
-        >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+        <div class="h-full flex flex-row justify-between items-center w-full">
+          <img
+            class="h-20vh w-25vh min-w-30 min-h-30 flex p-5"
+            src="../../../assets/images/web-assets/stikman-banner-frame.png"
+            alt=""
+          />
+          <button
+            (click)="clicked()"
+            mat-button
+            [matMenuTriggerFor]="menu"
+            class="mr-10%"
           >
+            <h1 class="font-norwester text-white text-6xl">MENU</h1>
+          </button>
+        </div>
+
+        <mat-menu
+          #menu="matMenu"
+          xPosition="after"
+          yPosition="below"
+          class="mt-10"
+        >
+          <button
+            mat-menu-item
+            (click)="scrollToSection(creatorhub, 'memecenter')"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Creator Hub
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(creatorhub, '2deditor')"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              2D Editor
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(creatorhub, 'downloadcenter')"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Downloads
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(tokenomics)"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Token Info
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(roadmap)"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Roadmap
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(games)"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Games
+            </h1>
+          </button>
+
+          <button
+            mat-menu-item
+            (click)="scrollToSection(howtobuy)"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              How To Buy
+            </h1>
+          </button>
+          <button
+            mat-menu-item
+            (click)="scrollToSection(socials)"
+            class="font-norwester"
+          >
+            <h1
+              class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
+            >
+              Socials
+            </h1>
+          </button>
+        </mat-menu>
+      </div>
+      <div
+        *ngIf="!this.isSmallScreen"
+        class="h-20% flex flex-row w-full shadow-lg shadow-white backgroundImage opacity-80"
+      >
+        <div
+          type="button"
+          (click)="scrollToSection(home)"
+          class="w-1/6 align-middle flex flex-col text-center items-center justify-center"
+        >
+          <img
+            class="h-20vh w-25vh flex p-5"
+            src="../../../assets/images/web-assets/stikman-banner-frame.png"
+            alt=""
+          />
+        </div>
+
+        <button
+          (click)="scrollToSection(creatorhub, 'memecenter')"
+          class="w-1/6 font-norwester medium-heading-text"
+        >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             Creator Hub
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(creatorhub, '2deditor')"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             2D Editor
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(creatorhub, 'downloadcenter')"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             Downloads
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(tokenomics)"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             Token Info
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(roadmap)"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             Roadmap
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(games)"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
-            Games
-          </h1>
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">Games</h1>
         </button>
 
         <button
-          mat-menu-item
           (click)="scrollToSection(howtobuy)"
-          class="font-norwester"
+          class="w-1/6 font-norwester medium-heading-text"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             How To Buy
           </h1>
         </button>
         <button
-          mat-menu-item
           (click)="scrollToSection(socials)"
-          class="font-norwester"
+          class="w-1/6% font-norwester medium-heading-text w-1/6"
         >
-          <h1
-            class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
-          >
+          <h1 class="opacity-100 hover:opacity-50 transition-opacity">
             Socials
           </h1>
         </button>
-      </mat-menu>
+      </div>
+      <div
+        class="h-80% w-full items-center flex flex-col justify-center text-center overflow-hidden"
+      >
+        <div
+          class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500"
+          [ngClass]="{
+            'translate-x-5': inViews.home && !isSmallScreen,
+            'translate-x-0': inViews.home && isSmallScreen
+          }"
+        >
+          <svg
+            *ngIf="!playingVideo"
+            class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
+            type="button"
+            (click)="pauseOrPlayVideo()"
+            width="150"
+            height="150"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="48"
+              stroke="#fff"
+              stroke-width="4"
+              fill="none"
+            />
+            <polygon points="40,30 75,50 40,70" fill="#fff" />
+          </svg>
+          <svg
+            *ngIf="playingVideo"
+            class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
+            type="button"
+            (click)="pauseOrPlayVideo()"
+            width="150"
+            height="150"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="48"
+              stroke="#fff"
+              stroke-width="4"
+              fill="none"
+            />
+            <rect x="35" y="30" width="10" height="40" fill="#fff" />
+            <rect x="55" y="30" width="10" height="40" fill="#fff" />
+          </svg>
+          <h1 class="medium-heading-text font-norwester">
+            Play That AI Generated Stickman Fire
+          </h1>
+        </div>
+
+        <div
+          *ngIf="!isSmallScreen"
+          class="flex flex-row w-full justify-between h-45vh"
+        >
+          <div
+            class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-45vh min-w-50vh"
+            [ngClass]="{ 'translate-y-5': inViews.home }"
+          >
+            <img
+              class="w-full h-full"
+              src="../../../assets/images/hey jump.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-2000 h-45vh min-w-50vh"
+            [ngClass]="{ 'translate-y-5': inViews.home }"
+          >
+            <img
+              class="w-full h-full"
+              src="../../../assets/images/direct_point_grimace.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-3000 h-45vh min-w-50vh"
+            [ngClass]="{ 'translate-y-5': inViews.home }"
+          >
+            <img
+              class="w-full h-full"
+              src="../../../assets/images/hand_out_happy_.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          *ngIf="isSmallScreen"
+          class="flex flex-row w-full justify-center items-center h-45vh"
+        >
+          <div
+            class="flex flex-col justify-center text-center align-middle items-center h-45vh min-w-50vh"
+          >
+            <img
+              class="w-full h-full"
+              src="../../../assets/images/hey jump.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div #creatorhub name="creatorhub" id="creatorhub">
+      <app-creator-hub #creatorHub></app-creator-hub>
+    </div>
+
+    <div
+      #tokenomics
+      name="tokenomics"
+      class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
+      id="tokenomics"
+      appIsInView
+      (inView)="inViewHandler($event, 'tokenomics')"
+    >
+      <div class="p-5 w-full h-full flex flex-col">
+        <div class="h-1/4 w-full flex flex-col">
+          <h1 class="large-heading-text font-norwester font-bold">
+            Token Info
+          </h1>
+        </div>
+
+        <div class="h-3/4 w-full flex flex-row items-end">
+          <div class="h-full w-1/2 flex flex-col justify-evenly">
+            <p class="small-heading-text font-norwester">
+              5% of Supply – Pumpin’ St1kman IP 5% is going to be locked and
+              loaded to push the St1kman brand to the moon. Think viral drops,
+              collabs, crazy promos – whatever it takes to blow this thing up.
+              We’re talkin' street-level marketing, meme armies, influencer
+              shoutouts. You’ll see St1kman in places you didn’t even expect,
+              hittin' every corner everywhere.. From the cave walls to the
+              digital age.
+            </p>
+            <p class="small-heading-text font-norwester">
+              5% of Supply – Creators Collab Bag Gotta get the creators on
+              board, fam. 5% of the supply’s sittin' ready to get those fire
+              collabs with content creators, meme lords, and influencers who’ll
+              put St1kman front and center. May even use it to make a hard grind
+              challenge and make $St1k the game credit for st1kpeople in the
+              entire fricken universe. Whether it’s YouTube, Twitch, TikTok –
+              they’re gonna be reppin’ St1kman like he’s the new kingpin of
+              crypto.
+            </p>
+            <p class="small-heading-text font-norwester">
+              5% of Supply – CEX Listings and Liquidity We’re droppin' 5% to get
+              on those big-boy exchanges. Liquidity locked tight, makin' sure
+              when St1kman hits, everybody’s got a way to buy, sell, and trade.
+              The mission? Gettin' that smooth flow on the top CEXs, no
+              friction, just action.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      *ngIf="!this.isSmallScreen"
-      class="h-20% flex flex-row w-full shadow-lg shadow-white backgroundImage opacity-80"
+      #roadmap
+      name="roadmap"
+      class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
+      id="roadmap"
+      appIsInView
+      (inView)="inViewHandler($event, 'roadmap')"
     >
-      <div
-        type="button"
-        (click)="scrollToSection(home)"
-        class="w-1/6 align-middle flex flex-col text-center items-center justify-center"
-      >
-        <img
-          class="h-20vh w-20vh flex p-5"
-          src="../../../assets/images/web-assets/stikman-banner-frame.png"
-          alt=""
-        />
+      <div class="w-full h-10% font-norwester large-heading-text p-5">
+        <h1>Roadmap</h1>
       </div>
-
-      <button
-        (click)="scrollToSection(creatorhub, 'memecenter')"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          Creator Hub
-        </h1>
-      </button>
-      <button
-        (click)="scrollToSection(creatorhub, '2deditor')"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          2D Editor
-        </h1>
-      </button>
-      <button
-        (click)="scrollToSection(creatorhub, 'downloadcenter')"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          Downloads
-        </h1>
-      </button>
-      <button
-        (click)="scrollToSection(tokenomics)"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          Token Info
-        </h1>
-      </button>
-      <button
-        (click)="scrollToSection(roadmap)"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Roadmap</h1>
-      </button>
-      <button
-        (click)="scrollToSection(games)"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Games</h1>
-      </button>
-
-      <button
-        (click)="scrollToSection(howtobuy)"
-        class="w-1/6 font-norwester medium-heading-text"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-          How To Buy
-        </h1>
-      </button>
-      <button
-        (click)="scrollToSection(socials)"
-        class="w-1/6% font-norwester medium-heading-text w-1/6"
-      >
-        <h1 class="opacity-100 hover:opacity-50 transition-opacity">Socials</h1>
-      </button>
+      <div class="w-full h-90% grid grid-cols-2">
+        <div *ngFor="let x of roadMapPanels" class="h-30vh p-10 w-full">
+          <div
+            class="h-90% w-90% shadow-md shadow-white border-4 rounded-full bg-black flex flex-col justify-center items-center text-center"
+          >
+            <h1 class="medium-heading-text font-norwester">{{ x.title }}</h1>
+            <h2 class="medium-heading-text font-norwester">{{ x.content }}</h2>
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      class="h-80% w-full items-center flex flex-col justify-center text-center overflow-hidden"
+      #games
+      name="games"
+      class="flex w-full h-screen shadow-lg shadow-white backgroundImage flex-row justify-center items-center"
+      id="games"
+      appIsInView
+      (inView)="inViewHandler($event, 'games')"
     >
-      <div
-        class="flex flex-col justify-center items-center mt-5 -translate-x-120 duration-1500"
-        [ngClass]="{
-          'translate-x-5': inViews.home && !isSmallScreen,
-          'translate-x-0': inViews.home && isSmallScreen
-        }"
-      >
-        <svg
-          *ngIf="!playingVideo"
-          class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
-          type="button"
-          (click)="pauseOrPlayVideo()"
-          width="150"
-          height="150"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            r="48"
-            stroke="#fff"
-            stroke-width="4"
-            fill="none"
-          />
-          <polygon points="40,30 75,50 40,70" fill="#fff" />
-        </svg>
-        <svg
-          *ngIf="playingVideo"
-          class="mb-7 opacity-100 hover:opacity-50 transition-opacity p-8"
-          type="button"
-          (click)="pauseOrPlayVideo()"
-          width="150"
-          height="150"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="50"
-            cy="50"
-            r="48"
-            stroke="#fff"
-            stroke-width="4"
-            fill="none"
-          />
-          <rect x="35" y="30" width="10" height="40" fill="#fff" />
-          <rect x="55" y="30" width="10" height="40" fill="#fff" />
-        </svg>
-        <h1 class="medium-heading-text font-norwester">
-          Play That AI Generated Stickman Fire
+      <div class="flex h-full w-1/2 flex-col items-start justify-evenly p-5">
+        <h1 class="large-heading-text font-norwester font-bold">
+          Play Stickman Destruction
         </h1>
+        <h2 class="medium-heading-text font-norwester font-bold">
+          PAYING HOMAGE AND RESPECT TO ALL THE STICKMAN GAME CREATORS IN THE
+          WORLD, maybe we make our own one day degens.
+        </h2>
+        <p class="small-heading-text font-norwester pl-5">
+          St1kman’s not just about memes and vids, we’re takin’ this thing next
+          level with the gaming section on the site. This ain’t just any gaming
+          spot, though—this is a shout-out to all the OG creators who been
+          flippin' St1kman games since day one. You know the ones—those classic
+          stickman brawlers, jumpers, shooters—we’re payin' homage to the
+          legends who put Stick Man on the map!
+        </p>
+        <p class="small-heading-text font-norwester pl-5">
+          Slide into the gaming section, play the classics, and drop screenshots
+          of your high scores. But don’t just sit there—when you hit those mad
+          numbers, post it with the St1kman logo and our site, let the world see
+          you reppin' the Stick Man legacy.
+        </p>
+        <p class="small-heading-text font-norwester pl-5">
+          And here’s the truth—St1kman’s evolved, bruh. He’s been through a
+          million different shapes, styles, and forms, but the essence stays the
+          same: simple, timeless, and something anyone can create. Whether
+          you’re hittin' high scores or just creating vibes, St1kman’s for
+          everyone. Dive in, play it, and help keep this degen stick figure
+          rollin’ through time!
+        </p>
       </div>
 
-      <div
-        *ngIf="!isSmallScreen"
-        class="flex flex-row w-full justify-between h-45vh"
-      >
+      <div class="w-1/2 h-full flex flex-col justify-center items-center">
+        <app-game-embed></app-game-embed>
+      </div>
+    </div>
+    <div
+      #howtobuy
+      name="howtobuy"
+      class="flex flex-col w-full h-screen font-norwester shadow-lg shadow-white backgroundImage items-center"
+      id="howtobuy"
+      appIsInView
+      (inView)="inViewHandler($event, 'howToBuy')"
+    >
+      <div class="flex flex-col h-full w-3/4 justify-evenly items-center">
         <div
-          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': inViews.home }"
-        >
-          <img
-            class="w-full h-full"
-            src="../../../assets/images/hey jump.png"
-            alt=""
-          />
-        </div>
-        <div
-          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-2000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': inViews.home }"
-        >
-          <img
-            class="w-full h-full"
-            src="../../../assets/images/direct_point_grimace.png"
-            alt=""
-          />
-        </div>
-        <div
-          class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-3000 h-45vh min-w-50vh"
-          [ngClass]="{ 'translate-y-5': inViews.home }"
-        >
-          <img
-            class="w-full h-full"
-            src="../../../assets/images/hand_out_happy_.png"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div
-        *ngIf="isSmallScreen"
-        class="flex flex-row w-full justify-center items-center h-45vh"
-      >
-        <div
-          class="flex flex-col justify-center text-center align-middle items-center h-45vh min-w-50vh"
-        >
-          <img
-            class="w-full h-full"
-            src="../../../assets/images/hey jump.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div #creatorhub name="creatorhub" id="creatorhub">
-    <app-creator-hub #creatorHub></app-creator-hub>
-  </div>
-
-  <div
-    #tokenomics
-    name="tokenomics"
-    class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
-    id="tokenomics"
-    appIsInView
-    (inView)="inViewHandler($event, 'tokenomics')"
-  >
-    <div class="p-5 w-full h-full flex flex-col">
-      <div class="h-1/4 w-full flex flex-col">
-        <h1 class="large-heading-text font-norwester font-bold">Token Info</h1>
-      </div>
-
-      <div class="h-3/4 w-full flex flex-row items-end">
-        <div class="h-full w-1/2 flex flex-col justify-evenly">
-          <p class="small-heading-text font-norwester">
-            5% of Supply – Pumpin’ St1kman IP 5% is going to be locked and
-            loaded to push the St1kman brand to the moon. Think viral drops,
-            collabs, crazy promos – whatever it takes to blow this thing up.
-            We’re talkin' street-level marketing, meme armies, influencer
-            shoutouts. You’ll see St1kman in places you didn’t even expect,
-            hittin' every corner everywhere.. From the cave walls to the digital
-            age.
-          </p>
-          <p class="small-heading-text font-norwester">
-            5% of Supply – Creators Collab Bag Gotta get the creators on board,
-            fam. 5% of the supply’s sittin' ready to get those fire collabs with
-            content creators, meme lords, and influencers who’ll put St1kman
-            front and center. May even use it to make a hard grind challenge and
-            make $St1k the game credit for st1kpeople in the entire fricken
-            universe. Whether it’s YouTube, Twitch, TikTok – they’re gonna be
-            reppin’ St1kman like he’s the new kingpin of crypto.
-          </p>
-          <p class="small-heading-text font-norwester">
-            5% of Supply – CEX Listings and Liquidity We’re droppin' 5% to get
-            on those big-boy exchanges. Liquidity locked tight, makin' sure when
-            St1kman hits, everybody’s got a way to buy, sell, and trade. The
-            mission? Gettin' that smooth flow on the top CEXs, no friction, just
-            action.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    #roadmap
-    name="roadmap"
-    class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
-    id="roadmap"
-    appIsInView
-    (inView)="inViewHandler($event, 'roadmap')"
-  >
-    <div class="w-full h-10% font-norwester large-heading-text p-5">
-      <h1>Roadmap</h1>
-    </div>
-    <div class="w-full h-90% grid grid-cols-2">
-      <div *ngFor="let x of roadMapPanels" class="h-30vh p-10 w-full">
-        <div
-          class="h-90% w-90% shadow-md shadow-white border-4 rounded-full bg-black flex flex-col justify-center items-center text-center"
-        >
-          <h1 class="medium-heading-text font-norwester">{{ x.title }}</h1>
-          <h2 class="medium-heading-text font-norwester">{{ x.content }}</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    #games
-    name="games"
-    class="flex w-full h-screen shadow-lg shadow-white backgroundImage flex-row justify-center items-center"
-    id="games"
-    appIsInView
-    (inView)="inViewHandler($event, 'games')"
-  >
-    <div class="flex h-full w-1/2 flex-col items-start justify-evenly p-5">
-      <h1 class="large-heading-text font-norwester font-bold">
-        Play Stickman Destruction
-      </h1>
-      <h2 class="medium-heading-text font-norwester font-bold">
-        PAYING HOMAGE AND RESPECT TO ALL THE STICKMAN GAME CREATORS IN THE
-        WORLD, maybe we make our own one day degens.
-      </h2>
-      <p class="small-heading-text font-norwester pl-5">
-        St1kman’s not just about memes and vids, we’re takin’ this thing next
-        level with the gaming section on the site. This ain’t just any gaming
-        spot, though—this is a shout-out to all the OG creators who been
-        flippin' St1kman games since day one. You know the ones—those classic
-        stickman brawlers, jumpers, shooters—we’re payin' homage to the legends
-        who put Stick Man on the map!
-      </p>
-      <p class="small-heading-text font-norwester pl-5">
-        Slide into the gaming section, play the classics, and drop screenshots
-        of your high scores. But don’t just sit there—when you hit those mad
-        numbers, post it with the St1kman logo and our site, let the world see
-        you reppin' the Stick Man legacy.
-      </p>
-      <p class="small-heading-text font-norwester pl-5">
-        And here’s the truth—St1kman’s evolved, bruh. He’s been through a
-        million different shapes, styles, and forms, but the essence stays the
-        same: simple, timeless, and something anyone can create. Whether you’re
-        hittin' high scores or just creating vibes, St1kman’s for everyone. Dive
-        in, play it, and help keep this degen stick figure rollin’ through time!
-      </p>
-    </div>
-
-    <div class="w-1/2 h-full flex flex-col justify-center items-center">
-      <app-game-embed></app-game-embed>
-    </div>
-  </div>
-  <div
-    #howtobuy
-    name="howtobuy"
-    class="flex flex-col w-full h-screen font-norwester shadow-lg shadow-white backgroundImage items-center"
-    id="howtobuy"
-    appIsInView
-    (inView)="inViewHandler($event, 'howToBuy')"
-  >
-    <div class="flex flex-col h-full w-3/4 justify-evenly items-center">
-      <div
-        class="flex flex-col h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black justify-center items-center text-center -translate-x-130 duration-1000"
-        [ngClass]="{
+          class="flex flex-col h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black justify-center items-center text-center -translate-x-130 duration-1000"
+          [ngClass]="{
           'translate-x-0': inViews.howToBuy,
           
         }"
-      >
-        <div class="flex flex-col w-full items-center justify-center">
-          <a href="https://phantom.app/" target="_blank">
-            <img
-              class="h-5vh w-15vh"
-              src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
-              alt=""
-          /></a>
+        >
+          <div class="flex flex-col w-full items-center justify-center">
+            <a href="https://phantom.app/" target="_blank">
+              <img
+                class="h-5vh w-15vh"
+                src="../../../assets/images/Phantom-Integration-Assets/Phantom-Integration-Assets/Logos/Phantom-Logo-Purple.svg"
+                alt=""
+            /></a>
 
-          <h1 class="font-norwester medium-heading-text p-5">
-            Create a wallet, we recommend Phantom Wallet.
-          </h1>
+            <h1 class="font-norwester medium-heading-text p-5">
+              Create a wallet, we recommend Phantom Wallet.
+            </h1>
+          </div>
         </div>
-      </div>
-      <div
-        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2000"
-        [ngClass]="{
+        <div
+          class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2000"
+          [ngClass]="{
           'translate-x-0': inViews.howToBuy,
         
         }"
-      >
-        <h1 class="font-norwester medium-heading-text p-5">
-          Get some $SOL this can be done on andy major exchange like Binance,
-          Coinbase etc. Once you have purchased your $SOL send it to the address
-          of your newly created wallet.
-        </h1>
-      </div>
-      <div
-        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2500"
-        [ngClass]="{
+        >
+          <h1 class="font-norwester medium-heading-text p-5">
+            Get some $SOL this can be done on andy major exchange like Binance,
+            Coinbase etc. Once you have purchased your $SOL send it to the
+            address of your newly created wallet.
+          </h1>
+        </div>
+        <div
+          class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2500"
+          [ngClass]="{
           'translate-x-0': inViews.howToBuy,
          
         }"
-      >
-        <div class="flex flex-row w-full h-1/2 justify-center p-2">
-          <a href="https://jup.ag/" target="_blank">
-            <img
-              class="h-10vh w-5vw"
-              src="../../../assets/images/jupiter-logo/Jupiter Logo/logowithtext-dark.svg"
-              alt=""
-          /></a>
-          <a href="https://raydium.io/swap/" target="_blank">
-            <div class="h-10vh w-5vw pl-16 flex flex-row">
+        >
+          <div class="flex flex-row w-full h-1/2 justify-center p-2">
+            <a href="https://jup.ag/" target="_blank">
               <img
-                class="h-10vh w-5vw pl-16"
-                src="../../../assets/images/raydium-logo.webp"
+                class="h-10vh w-5vw"
+                src="../../../assets/images/jupiter-logo/Jupiter Logo/logowithtext-dark.svg"
                 alt=""
-              />
-              <h1 class="large-heading-text font-robotomonobold pt-5 pl-5">
-                Raydium
-              </h1>
-            </div>
-          </a>
+            /></a>
+            <a href="https://raydium.io/swap/" target="_blank">
+              <div class="h-10vh w-5vw pl-16 flex flex-row">
+                <img
+                  class="h-10vh w-5vw pl-16"
+                  src="../../../assets/images/raydium-logo.webp"
+                  alt=""
+                />
+                <h1 class="large-heading-text font-robotomonobold pt-5 pl-5">
+                  Raydium
+                </h1>
+              </div>
+            </a>
+          </div>
+          <div class="flex flex-col h-1/2 w-full">
+            <h1 class="font-norwester medium-heading-text p-5">
+              Go to the Jupiter or Raydium websites, connect your phantom
+              wallet, paste the address of $ST1K into the swap panel and select
+              $SOL as the other token to exchange.
+            </h1>
+          </div>
         </div>
-        <div class="flex flex-col h-1/2 w-full">
-          <h1 class="font-norwester medium-heading-text p-5">
-            Go to the Jupiter or Raydium websites, connect your phantom wallet,
-            paste the address of $ST1K into the swap panel and select $SOL as
-            the other token to exchange.
-          </h1>
-        </div>
-      </div>
-      <div
-        class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-3000"
-        [ngClass]="{
+        <div
+          class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-3000"
+          [ngClass]="{
           'translate-x-0': inViews.howToBuy,
           
         }"
-      >
-        <h1 class="font-norwester medium-heading-text p-5">
-          Swap your $SOL for $ST1k and prepare for Valhalla! .
-        </h1>
+        >
+          <h1 class="font-norwester medium-heading-text p-5">
+            Swap your $SOL for $ST1k and prepare for Valhalla! .
+          </h1>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div
-    #socials
-    name="socials"
-    class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
-    id="socials"
-    appIsInView
-    (inView)="inViewHandler($event, 'socials')"
-  >
-    <div class="grid grid-cols-2 w-full h-full">
-      <div class="flex flex-col justify-center items-center">
-        <a href="https://www.youtube.com/">
-          <img
-            class="h-15vh w-15vw"
-            src="../../../assets/images/youtube-logos/youtube_monochrome_logos/digital_and_tv/yt_logo_mono_dark.png"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="flex flex-col justify-center items-center">
-        <a href="https://x.com/home">
-          <img
-            class="h-20vh w-20vw"
-            src="../../../assets/images/x-logo (1)/logo-white.png"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="flex flex-col justify-center items-center">
-        <a href="https://www.tiktok.com/en/">
-          <img
-            class="h-20vh w-20vw"
-            src="../../../assets/images/tik-tok-logos/Dev Portal Logo Pack/TikTok Logo Pack/TikTok – Logo – PNG [CMYK]/Horizontal/TikTok-logo-CMYK-Horizontal-white.png"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="flex flex-col justify-center items-center">
-        <a href="https://telegram.org/">
-          <img
-            class="h-20vh w-20vw"
-            src="../../../assets/images/telegram-logos/Logo.svg"
-            alt=""
-          />
-        </a>
+    <div
+      #socials
+      name="socials"
+      class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+      id="socials"
+      appIsInView
+      (inView)="inViewHandler($event, 'socials')"
+    >
+      <div class="grid grid-cols-2 w-full h-full">
+        <div class="flex flex-col justify-center items-center">
+          <a href="https://www.youtube.com/">
+            <img
+              class="h-15vh w-15vw"
+              src="../../../assets/images/youtube-logos/youtube_monochrome_logos/digital_and_tv/yt_logo_mono_dark.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <a href="https://x.com/home">
+            <img
+              class="h-20vh w-20vw"
+              src="../../../assets/images/x-logo (1)/logo-white.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <a href="https://www.tiktok.com/en/">
+            <img
+              class="h-20vh w-20vw"
+              src="../../../assets/images/tik-tok-logos/Dev Portal Logo Pack/TikTok Logo Pack/TikTok – Logo – PNG [CMYK]/Horizontal/TikTok-logo-CMYK-Horizontal-white.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <a href="https://telegram.org/">
+            <img
+              class="h-20vh w-20vw"
+              src="../../../assets/images/telegram-logos/Logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
     </div>
+    <app-stikman-border [horizontalInput]="true"></app-stikman-border>
+  </div>
+  <div>
+    <app-stikman-border
+      class="z-10"
+      [horizontalInput]="false"
+    ></app-stikman-border>
   </div>
 </div>

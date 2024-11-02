@@ -19,6 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CreatorHubComponent } from '../creator-hub/creator-hub.component';
+import { StikmanBorderComponent } from '../stikman-border/stikman-border.component';
 
 @Component({
   selector: 'app-main-page',
@@ -32,6 +33,7 @@ import { CreatorHubComponent } from '../creator-hub/creator-hub.component';
     MatButtonModule,
     MatMenuModule,
     CreatorHubComponent,
+    StikmanBorderComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css',
