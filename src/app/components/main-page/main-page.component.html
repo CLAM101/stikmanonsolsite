@@ -1,15 +1,11 @@
-<div
-  class="w-screen h-auto flex flex-row overflow-hidden justify-between bg-black z-0"
->
-  <div>
-    <app-stikman-border
-      class="z-10"
-      [horizontalInput]="false"
-    ></app-stikman-border>
-  </div>
+<div class="w-screen h-auto flex flex-row justify-between bg-black z-0">
+  <app-stikman-border
+    class="z-10 w-[3vw]"
+    [horizontalInput]="false"
+  ></app-stikman-border>
 
   <div
-    class="no-scrollbar flex flex-col h-auto overflow-x-hidden overflow-y-scroll w-[94%] bg-black relative z-0 rounded-md"
+    class="no-scrollbar flex flex-col h-full overflow-y-scroll no-scrollbar w-[94vw] bg-black relative z-0"
     id="main-container"
   >
     <audio #voAudioElement>
@@ -18,11 +14,15 @@
         type="audio/mpeg"
       />
     </audio>
-    <app-stikman-border [horizontalInput]="true"></app-stikman-border>
+
+    <app-stikman-border
+      class="w-[94vw]"
+      [horizontalInput]="true"
+    ></app-stikman-border>
     <div
       #home
       name="home"
-      class="flex flex-col h-screen w-screen shadow-lg shadow-white relative overflow-hidden backgroundImage"
+      class="flex flex-col h-screen w-full shadow-lg shadow-white relative overflow-hidden backgroundImage rounded-lg"
       id="home"
       appIsInView
       (inView)="inViewHandler($event, 'home')"
@@ -597,12 +597,14 @@
         </div>
       </div>
     </div>
-    <app-stikman-border [horizontalInput]="true"></app-stikman-border>
-  </div>
-  <div>
     <app-stikman-border
-      class="z-10"
-      [horizontalInput]="false"
+      class="w-[94vw]"
+      [horizontalInput]="true"
     ></app-stikman-border>
   </div>
+
+  <app-stikman-border
+    class="z-10 w-[3vw]"
+    [horizontalInput]="false"
+  ></app-stikman-border>
 </div>
