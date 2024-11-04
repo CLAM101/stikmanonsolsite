@@ -5,7 +5,6 @@ interface Image {
   name: string;
   url: string;
   imgSrc?: string;
-  caption?: string;
 }
 @Component({
   selector: 'app-image-grid',
@@ -16,11 +15,14 @@ interface Image {
 })
 export class ImageGridComponent {
   images!: Image[];
-  // input for images
+  showNamesIn!: boolean;
 
   @Input() set imagesInput(value: Image[]) {
-    debugger;
     this.images = value;
+  }
+
+  @Input() set showNames(value: boolean) {
+    this.showNamesIn = value;
   }
 
   // Array of images with their respective URLs and file names

@@ -159,22 +159,26 @@ export class MainPageComponent {
     {
       title: 'Phase 1',
       content: 'Launch of Stikman Token',
-      icon: 'fas fa-rocket',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-gasses-purple.png?alt=media&token=a3d5c094-cc8f-4b61-a433-3d76cc2f6bb5',
     },
     {
       title: 'Phase 2',
       content: 'Launch of Stikman NFTs',
-      icon: 'fas fa-rocket',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-glasses-orange.png?alt=media&token=c52bc7a3-9654-4c5c-8a42-d3a30bbf50b2',
     },
     {
       title: 'Phase 3',
       content: 'Launch of Stikman Games',
-      icon: 'fas fa-rocket',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-gasses-purple.png?alt=media&token=a3d5c094-cc8f-4b61-a433-3d76cc2f6bb5',
     },
     {
       title: 'Phase 4',
       content: 'Launch of Stikman Creator Hub',
-      icon: 'fas fa-rocket',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-glasses-orange.png?alt=media&token=c52bc7a3-9654-4c5c-8a42-d3a30bbf50b2',
     },
   ];
 

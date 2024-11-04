@@ -362,16 +362,20 @@
           appIsInView
           (inView)="inViewHandler($event, 'tokenomics')"
         >
-          <div class="p-5 w-full h-full flex flex-col">
-            <div class="h-1/4 w-full flex flex-col">
+          <div
+            class="p-5 w-full h-full flex flex-col justify-center items-center"
+          >
+            <div class="h-5% w-full flex flex-col">
               <h1 class="large-heading-text font-norwester font-bold">
                 Token Info
               </h1>
             </div>
 
-            <div class="h-3/4 w-full flex flex-row items-end">
-              <div class="h-full w-1/2 flex flex-col justify-evenly">
-                <p class="small-heading-text font-norwester">
+            <div
+              class="w-2/3 h-95% flex flex-col justify-evenly items-center text-center overflow-y-scroll no-scrollbar"
+            >
+              <div class="h-full w-full flex flex-col justify-evenly">
+                <p class="medium-heading-text font-norwester">
                   5% of Supply – Pumpin’ St1kman IP 5% is going to be locked and
                   loaded to push the St1kman brand to the moon. Think viral
                   drops, collabs, crazy promos – whatever it takes to blow this
@@ -380,7 +384,7 @@
                   even expect, hittin' every corner everywhere.. From the cave
                   walls to the digital age.
                 </p>
-                <p class="small-heading-text font-norwester">
+                <p class="medium-heading-text font-norwester">
                   5% of Supply – Creators Collab Bag Gotta get the creators on
                   board, fam. 5% of the supply’s sittin' ready to get those fire
                   collabs with content creators, meme lords, and influencers
@@ -406,7 +410,7 @@
             <h1>Roadmap</h1>
           </div>
           <div class="w-full h-90% grid grid-cols-2">
-            <div *ngFor="let x of roadMapPanels" class="h-30vh p-10 w-full">
+            <div *ngFor="let x of roadMapPanels" class="p-10 h-50vh w-60vh">
               <div
                 class="h-90% w-90% shadow-md shadow-white border-4 rounded-full bg-black flex flex-col justify-center items-center text-center"
               >
@@ -416,6 +420,7 @@
                 <h2 class="medium-heading-text font-norwester">
                   {{ x.content }}
                 </h2>
+                <img class="h-20vh w-25vh" [src]="x.imgSrc" alt="" />
               </div>
             </div>
           </div>

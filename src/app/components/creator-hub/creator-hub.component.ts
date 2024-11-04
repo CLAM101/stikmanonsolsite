@@ -40,19 +40,26 @@ export class CreatorHubComponent {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20Gangsta%20Cut.glb?alt=media&token=e2039459-c9b5-44a3-99d9-7c63cd23840f',
     },
     {
-      name: 'St1kman fbx',
-      imgSrc:
-        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20fbx%20Final.fbx?alt=media&token=dc8ea0e1-2c5a-4b76-9688-c94bb7e183ff',
-    },
-    {
       name: 'St1kman Mesh glb',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2FSt1kman%20mesh%20Final.png?alt=media&token=90b6da8c-8115-4cc8-8a83-1aceb3f58529',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20mesh%20Final.glb?alt=media&token=9fee6cd6-64c4-42d1-a7d0-8dee9f181c8e',
     },
     {
-      name: 'St1kman Gangsta fxb',
+      name: 'St1kman psd',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2Fhey%20jump.png?alt=media&token=06a25e60-ba90-4048-9271-bb0048719dca',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman-final.psd?alt=media&token=1f4ac022-26e1-4a47-8dc5-489590d9b609',
+    },
+    {
+      name: 'St1kman fbx',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20fbx%20Final.fbx?alt=media&token=dc8ea0e1-2c5a-4b76-9688-c94bb7e183ff',
+    },
+
+    {
+      name: 'St1kman Gangsta fbx',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kmangangsta%20fbx%20Cut.fbx?alt=media&token=3ebd8da7-8438-475a-bc4a-ffb6930599f9',
@@ -80,12 +87,6 @@ export class CreatorHubComponent {
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Faudio%2Fanime.mp3?alt=media&token=bf81c0cc-52e3-4257-8d3e-fc47b8179319',
-    },
-    {
-      name: 'St1kman psd',
-      imgSrc:
-        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2Fhey%20jump.png?alt=media&token=06a25e60-ba90-4048-9271-bb0048719dca',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman.psd?alt=media&token=47bf7cb0-a0e2-4e2d-9370-5e435ad833c9',
     },
   ];
 
@@ -122,8 +123,18 @@ export class CreatorHubComponent {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Ftrup-elon-meme.png?alt=media&token=0ca88d27-e1cc-4a91-ac87-6907fdc7986b',
       name: 'Image 1',
     },
-
-    // Add more images as needed
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdrawing%20pad%20anime.png?alt=media&token=5a1fc072-53c7-476d-bb3c-dc9fa3e964e5',
+      name: 'Image 1',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fst1kman%20at%20trump%20biden.jpg?alt=media&token=157dd5f2-c987-4f22-a8a9-923396b25c92',
+      name: 'Image 1',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fst1kman-cereal-meme.png?alt=media&token=ab2aa02a-abc4-4c61-81cb-3bf2d241d025',
+      name: 'Image 1',
+    },
   ];
 
   ngOnInit() {

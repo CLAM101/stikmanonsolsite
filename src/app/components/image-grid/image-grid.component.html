@@ -8,9 +8,9 @@
         type="button"
         [src]="image.imgSrc || image.url"
         [alt]="image.name"
-        class="h-20vh w-40vh rounded-lg shadow-lg mb-4"
+        class="h-15vh w-20vh rounded-lg shadow-lg mb-4"
       />
-      <h1 *ngIf="image.name" class="small-heading-text font-norwester">
+      <h1 *ngIf="showNamesIn" class="small-heading-text font-norwester">
         {{ image.name }}
       </h1>
     </div>
