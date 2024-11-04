@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // For *ngFor, *ngIf directives
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Import DomSanitizer
-
+interface Image {
+  name: string;
+  url: string;
+}
 @Component({
   selector: 'app-image-grid',
   standalone: true, // This makes the component standalone
@@ -10,103 +13,16 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Im
   styleUrls: ['./image-grid.component.css'], // Optional: You can use a CSS file for custom styles or inline styles
 })
 export class ImageGridComponent {
-  // Array of images with their respective URLs and file names
-  images = [
-    {
-      url: '../../../assets/images/memes/degen-gasses-purple.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-glasses-orange.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/group-photo-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/strip-club-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/caveman-fucking-meme.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-gasses-purple.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-glasses-orange.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/group-photo-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/strip-club-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/caveman-fucking-meme.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-gasses-purple.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-glasses-orange.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/group-photo-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/strip-club-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/caveman-fucking-meme.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-gasses-purple.png',
-      name: 'Image 1',
-    },
-    {
-      url: '../../../assets/images/memes/degen-glasses-orange.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/fuck-bear-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/group-photo-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/jelous-gf-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/strip-club-meme.png',
-      name: 'Image 1',
-    },
-    { url: '../../../assets/images/memes/trup-elon-meme.png', name: 'Image 1' },
-    {
-      url: '../../../assets/images/memes/caveman-fucking-meme.png',
-      name: 'Image 1',
-    },
+  images!: Image[];
+  // input for images
 
-    // Add more images as needed
-  ];
+  @Input() set imagesInput(value: Image[]) {
+    debugger;
+    this.images = value;
+  }
+
+  // Array of images with their respective URLs and file names
+
   constructor(private sanitizer: DomSanitizer) {} //
 
   sanitizeUrl(url: string): SafeResourceUrl {

@@ -1,5 +1,7 @@
 <div class="h-screen w-full flex flex-col justify-start">
-  <div class="w-full h-85% grid grid-cols-3 overflow-y-scroll no-scrollbar">
+  <div
+    class="w-full h-85% grid md:grid-cols-3 sm:grid-cols-2 overflow-y-scroll no-scrollbar"
+  >
     <div class="items-center text-center p-8" *ngFor="let image of images">
       <img
         (click)="downloadImage(image.url, image.name + '.jpg')"

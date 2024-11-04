@@ -20,10 +20,26 @@
 </div>
 <div
   *ngIf="!horizontal"
-  class="h-full w-full inline-flex flex-col overflow-y-hidden bg-solanaPurple"
+  class="h-auto w-full inline-flex flex-col overflow-y-hidden bg-solanaPurple"
 >
   <ul
     class="flex flex-col items-center justify-center [&_li]:my-8 [&_img]:max-h-none animate-vertical-scroll overflow-y-hidden"
+  >
+    <li *ngFor="let stickman of stickmen">
+      <img class="h-5vh w-5vh" [src]="stickman" alt="Facebook" />
+    </li>
+  </ul>
+  <ul
+    class="flex flex-col items-center justify-center [&_li]:my-8 [&_img]:max-h-none animate-vertical-scroll overflow-y-hidden"
+    aria-hidden="true"
+  >
+    <li *ngFor="let stickman of stickmen">
+      <img class="h-5vh w-5vh" [src]="stickman" alt="Facebook" />
+    </li>
+  </ul>
+  <ul
+    class="flex flex-col items-center justify-center [&_li]:my-8 [&_img]:max-h-none animate-vertical-scroll overflow-y-hidden"
+    aria-hidden="true"
   >
     <li *ngFor="let stickman of stickmen">
       <img class="h-5vh w-5vh" [src]="stickman" alt="Facebook" />

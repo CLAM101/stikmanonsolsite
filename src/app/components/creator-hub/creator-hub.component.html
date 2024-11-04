@@ -15,7 +15,7 @@
       <img
         *ngIf="!this.isSmallScreen"
         class="h-60vh w-45vh relative z-0 mt-15vh"
-        src="../../../assets/images/web-assets/what anime surprise.png"
+        src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2Fwhat%20anime%20surprise.png?alt=media&token=656de241-9f7c-4bd9-9376-39b91c4d1906"
         alt=""
       />
 
@@ -45,7 +45,7 @@
       <img
         *ngIf="!this.isSmallScreen"
         class="h-60vh w-45vh relative z-0 mb-25vh"
-        src="../../../assets/images/web-assets/Stikman-punch.png"
+        src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2FStikman-punch.png?alt=media&token=0d37f14d-f7ef-44ca-b23d-446e52e92e05"
         alt=""
       />
     </div>
@@ -76,24 +76,27 @@
 <div
   #downloadcenter
   name="downloadcenter"
-  class="flex flex-col w-full h-screen shadow-white backgroundImage overflow-y-scroll no-scrollbar"
+  class="flex flex-col w-full h-screen shadow-white backgroundImage overflow-y-hidden no-scrollbar"
   id="downloadcenter"
   appIsInView
 >
   <div class="flex flex-col w-full h-10%">
     <h1 class="large-heading-text font-norwester p-5">Download Center</h1>
   </div>
-  <div class="w-full flex flex-row h-90% pt-8">
-    <div class="w-1/2 flex flex-col h-full">
+  <div
+    class="w-full no-scrollbar sm:overflow-y-scroll flex md:flex-row sm:flex-col h-90% pt-8"
+  >
+    <div class="md:w-1/2 sm:w-full flex flex-col h-full">
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Creator Assets
       </h1>
+      <app-image-grid [imagesInput]="memeImages"></app-image-grid>
     </div>
-    <div class="w-1/2 flex flex-col h-full">
-      <h1 class="medium-heading-text font-norwester">
+    <div class="md:w-1/2 sm:w-full flex flex-col h-full">
+      <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Memes
       </h1>
-      <app-image-grid></app-image-grid>
+      <app-image-grid [imagesInput]="memeImages"></app-image-grid>
     </div>
   </div>
 </div>
