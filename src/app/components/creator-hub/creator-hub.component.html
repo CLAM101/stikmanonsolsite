@@ -83,14 +83,12 @@
   <div class="flex flex-col w-full h-10%">
     <h1 class="large-heading-text font-norwester p-5">Download Center</h1>
   </div>
-  <div
-    class="w-full no-scrollbar sm:overflow-y-scroll flex md:flex-row sm:flex-col h-90% pt-8"
-  >
+  <div class="w-full flex md:flex-row sm:flex-col h-90% pt-8 overflow-hidden">
     <div class="md:w-1/2 sm:w-full flex flex-col h-full">
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Creator Assets
       </h1>
-      <app-image-grid [imagesInput]="memeImages"></app-image-grid>
+      <app-image-grid [imagesInput]="assetDownLoadImages"></app-image-grid>
     </div>
     <div class="md:w-1/2 sm:w-full flex flex-col h-full">
       <h1 class="medium-heading-text font-norwester p-5">

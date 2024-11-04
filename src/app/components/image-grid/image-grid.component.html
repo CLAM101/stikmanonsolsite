@@ -4,12 +4,15 @@
   >
     <div class="items-center text-center p-8" *ngFor="let image of images">
       <img
-        (click)="downloadImage(image.url, image.name + '.jpg')"
+        (click)="downloadImage(image.url, image.name)"
         type="button"
-        [src]="image.url"
+        [src]="image.imgSrc || image.url"
         [alt]="image.name"
         class="h-20vh w-40vh rounded-lg shadow-lg mb-4"
       />
+      <h1 *ngIf="image.name" class="small-heading-text font-norwester">
+        {{ image.name }}
+      </h1>
     </div>
   </div>
 </div>

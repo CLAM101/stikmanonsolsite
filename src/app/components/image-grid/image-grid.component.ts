@@ -4,6 +4,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Im
 interface Image {
   name: string;
   url: string;
+  imgSrc?: string;
+  caption?: string;
 }
 @Component({
   selector: 'app-image-grid',
@@ -28,6 +30,8 @@ export class ImageGridComponent {
   sanitizeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+
+  downloadFile() {}
 
   // Method to download an image
   downloadImage(url: string, name: string) {

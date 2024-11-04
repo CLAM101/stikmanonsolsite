@@ -107,8 +107,9 @@ export class MainPageComponent {
   @ViewChild('creatorHub') creatorHub!: CreatorHubComponent;
 
   scrollToSection(el: HTMLElement, location?: string) {
-    el.scrollIntoView({ behavior: 'smooth' });
-    console.log('Scrolling to ' + el.getAttribute('name'));
+    const yOffset = -20; // adjust as needed
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
 
     if (location) {
       this.creatorHub.scrollToSection(location);
@@ -122,12 +123,6 @@ export class MainPageComponent {
   clicked() {
     console.log('clicked');
   }
-
-  // ngOnInit() {
-
-  // }
-
-  //ngAfterViewInit() {}
 
   inViewHandler(
     inView: boolean,

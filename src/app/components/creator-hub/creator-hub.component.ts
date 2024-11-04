@@ -35,27 +35,56 @@ export class CreatorHubComponent {
   assetDownLoadImages = [
     {
       name: 'St1kman Gangster glb',
-      imgSrc: '',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2FStikman_hat_blunt.png?alt=media&token=2c027eb6-b25d-4013-9639-8320d6b2b881',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20Gangsta%20Cut.glb?alt=media&token=e2039459-c9b5-44a3-99d9-7c63cd23840f',
     },
     {
       name: 'St1kman fbx',
-      imgSrc: '',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20fbx%20Final.fbx?alt=media&token=dc8ea0e1-2c5a-4b76-9688-c94bb7e183ff',
     },
     {
       name: 'St1kman Mesh glb',
-      imgSrc: '',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2FSt1kman%20mesh%20Final.png?alt=media&token=90b6da8c-8115-4cc8-8a83-1aceb3f58529',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20mesh%20Final.glb?alt=media&token=9fee6cd6-64c4-42d1-a7d0-8dee9f181c8e',
     },
     {
       name: 'St1kman Gangsta fxb',
-      imgSrc: '',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kmangangsta%20fbx%20Cut.fbx?alt=media&token=3ebd8da7-8438-475a-bc4a-ffb6930599f9',
     },
     {
+      name: 'St1kman VO',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Faudio%2Fst1kman%20intro%20voiceover%20(1).mp3?alt=media&token=497d8674-dfe8-42fc-bdf7-2b49796b5d1c',
+    },
+    {
+      name: 'St1kman Digital Age Song',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Faudio%2Faa%20full%20Caveman%20to%20Digital%20Age.MP3?alt=media&token=b13cae30-cf73-46e0-8dce-ba3fe99511a3',
+    },
+    {
+      name: 'St1kman Country Song',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Faudio%2Fcowboy.mp3?alt=media&token=fd0fc8e4-5ba0-4a0a-b174-a03e35933f8c',
+    },
+    {
+      name: 'St1kman Anime Song',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Faudio%2Fanime.mp3?alt=media&token=bf81c0cc-52e3-4257-8d3e-fc47b8179319',
+    },
+    {
       name: 'St1kman psd',
-      imgSrc: '',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2Fhey%20jump.png?alt=media&token=06a25e60-ba90-4048-9271-bb0048719dca',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/st1kman.psd?alt=media&token=47bf7cb0-a0e2-4e2d-9370-5e435ad833c9',
     },
   ];
@@ -105,15 +134,16 @@ export class CreatorHubComponent {
     const el: HTMLElement | null = document.getElementById(id);
 
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to ' + el.getAttribute('name'));
+      const yOffset = -20; // adjust as needed
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 
   constructPotopeaURL() {
     const config = {
       files: [
-        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fst1kman.psd?alt=media&token=b0e43736-3bf1-4607-a931-48aa26277f4d',
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman-final.psd?alt=media&token=1f4ac022-26e1-4a47-8dc5-489590d9b609',
       ],
     };
 
