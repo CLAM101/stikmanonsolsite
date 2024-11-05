@@ -2,12 +2,30 @@
   <div>
     <h1 class="medium-heading-text font-norwester">{{ title }}</h1>
     <iframe
-      [src]="this.embed"
-      width="720"
-      height="480"
-      class="border rounded"
-      allowfullscreen
-      sandbox="allow-scripts allow-same-origin"
+      [hidden]="games.stickGuysDefense"
+      *ngIf="embed"
+      src="https://www.onlinegames.io/games/2022/unity3/stick-guys-defense/index.html"
+      width="720px"
+      height="480px"
+      class=""
+    >
+    </iframe>
+    <iframe
+      [hidden]="games.stikmanDestruction"
+      *ngIf="embed"
+      src="https://www.onlinegames.io/games/2021/unity3/stickman-destruction/index.html"
+      width="720px"
+      height="480px"
+      class=""
+    >
+    </iframe>
+    <iframe
+      [hidden]="games.getOnTop"
+      *ngIf="embed"
+      src="https://www.onlinegames.io/games/2024/code/6/get-on-top/index.html"
+      width="720px"
+      height="480px"
+      class=""
     >
     </iframe>
   </div>
