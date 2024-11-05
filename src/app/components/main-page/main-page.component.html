@@ -357,7 +357,7 @@
         <div
           #tokenomics
           name="tokenomics"
-          class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
+          class="flex flex-col w-full h-screen shadow-lg shadow-white layered-background"
           id="tokenomics"
           appIsInView
           (inView)="inViewHandler($event, 'tokenomics')"
@@ -380,19 +380,24 @@
                   loaded to push the St1kman brand to the moon. Think viral
                   drops, collabs, crazy promos – whatever it takes to blow this
                   thing up. We’re talkin' street-level marketing, meme armies,
-                  influencer shoutouts. You’ll see St1kman in places you didn’t
-                  even expect, hittin' every corner everywhere.. From the cave
-                  walls to the digital age.
+                  influencer shoutouts.
+                </p>
+                <p class="medium-heading-text font-norwester">
+                  You’ll see St1kman in places you didn’t even expect, hittin'
+                  every corner everywhere. From the cave walls to the digital
+                  age.
                 </p>
                 <p class="medium-heading-text font-norwester">
                   5% of Supply – Creators Collab Bag Gotta get the creators on
                   board, fam. 5% of the supply’s sittin' ready to get those fire
                   collabs with content creators, meme lords, and influencers
-                  who’ll put St1kman front and center. May even use it to make a
-                  hard grind challenge and make $St1k the game credit for
-                  st1kpeople in the entire fricken universe. Whether it’s
-                  YouTube, Twitch, TikTok – they’re gonna be reppin’ St1kman
-                  like he’s the new kingpin of crypto.
+                  who’ll put St1kman front and center.
+                </p>
+                <p class="medium-heading-text font-norwester">
+                  May even use it to make a hard grind challenge and make $St1k
+                  the game credit for st1kpeople in the entire fricken universe.
+                  Whether it’s YouTube, Twitch, TikTok – they’re gonna be
+                  reppin’ St1kman like he’s the new kingpin of crypto.
                 </p>
               </div>
             </div>
@@ -410,17 +415,20 @@
             <h1>Roadmap</h1>
           </div>
           <div class="w-full h-90% grid grid-cols-2">
-            <div *ngFor="let x of roadMapPanels" class="p-10 h-50vh w-60vh">
+            <div
+              *ngFor="let x of roadMapPanels"
+              class="flex flex-col justify-center items-center"
+            >
               <div
-                class="h-90% w-90% shadow-md shadow-white border-4 rounded-full bg-black flex flex-col justify-center items-center text-center"
+                class="h-90% w-90% shadow-md border-4 border-white rounded-full bg-black flex flex-col justify-center items-center"
               >
-                <h1 class="medium-heading-text font-norwester">
+                <h1 class="small-heading-text font-norwester">
                   {{ x.title }}
                 </h1>
-                <h2 class="medium-heading-text font-norwester">
+                <h2 class="small-heading-text font-norwester">
                   {{ x.content }}
                 </h2>
-                <img class="h-20vh w-25vh" [src]="x.imgSrc" alt="" />
+                <img class="h-30vh w-30vh" [src]="x.imgSrc" alt="" />
               </div>
             </div>
           </div>

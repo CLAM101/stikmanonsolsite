@@ -76,7 +76,7 @@
 <div
   #downloadcenter
   name="downloadcenter"
-  class="flex flex-col w-full h-screen shadow-white backgroundImage overflow-y-hidden no-scrollbar"
+  class="flex flex-col w-full h-screen shadow-white backgroundImage justify-start overflow-y-hidden no-scrollbar"
   id="downloadcenter"
   appIsInView
 >
@@ -84,19 +84,27 @@
     <h1 class="large-heading-text font-norwester p-5">Download Center</h1>
   </div>
   <div
-    class="w-full flex md:flex-row sm:flex-col h-90% pt-8 sm:overflow-y-scroll overflow-hidden no-scrollbar"
+    class="w-full flex md:flex-row sm:flex-col xs:flex-col h-[82%] sm:overflow-y-scroll xs:overflow-y-scroll md:overflow-hidden no-scrollbar"
   >
-    <div class="md:w-1/2 sm:w-full flex flex-col h-full">
+    <div class="md:w-1/2 sm:w-full flex flex-col h-100vh">
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Creator Assets
       </h1>
-      <app-image-grid [imagesInput]="assetDownLoadImages"></app-image-grid>
+      <app-image-grid
+        [showNames]="true"
+        [imagesInput]="assetDownLoadImages"
+      ></app-image-grid>
     </div>
-    <div class="md:w-1/2 sm:w-full flex flex-col h-full">
+    <div
+      class="md:w-1/2 sm:pt-8 xs:pt-8 md:pt-0 sm:w-full flex flex-col h-full"
+    >
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Memes
       </h1>
-      <app-image-grid [imagesInput]="memeImages"></app-image-grid>
+      <app-image-grid
+        [showNames]="false"
+        [imagesInput]="memeImages"
+      ></app-image-grid>
     </div>
   </div>
 </div>

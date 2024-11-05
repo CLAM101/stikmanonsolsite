@@ -58,20 +58,9 @@
     background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.png?alt=media&token=6cacd35a-fe8f-447b-ad0c-c27b3ba2b221");
   }
 
-  .backgroundGangster {
-    background-image: url("./assets/video/st1kman\ and\ gansters.mp4");
-  }
-
-  .backgroundBlunt {
-    background-image: url("./assets/images/web-assets/Stikman\ hat\ blunt.png");
-  }
-
   .layered-background {
-    background-image: url("./assets/images/2\ \(1\).png"),
-      url("./assets/images/web-assets/St1kman\ Gangsta\ Cut.png");
-    background-size: cover, contain; /* Adjust each image's size */
-    background-position: center, top; /* Position each image */
-    background-repeat: no-repeat, no-repeat; /* Control repetition */
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.png?alt=media&token=6cacd35a-fe8f-447b-ad0c-c27b3ba2b221"),
+      url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fdarker-token-background.webp?alt=media&token=1d1419c0-72bd-43a3-8e79-5cc08a36ca1d");
   }
 
   .large-heading-text {

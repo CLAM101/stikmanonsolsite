@@ -1,11 +1,14 @@
-<!-- <div class="w-full h-full flex justify-center items-center">
-  <iframe
-    src="https://www.onlinegames.io/games/2021/unity3/stickman-destruction/index.html"
-    width="720"
-    height="480"
-    class="border rounded"
-    allowfullscreen
-    sandbox="allow-scripts allow-same-origin"
-  >
-  </iframe>
-</div> -->
+<div class="w-full h-full flex justify-center items-center">
+  <div>
+    <h1 class="medium-heading-text font-norwester">{{ title }}</h1>
+    <iframe
+      [src]="this.embed"
+      width="720"
+      height="480"
+      class="border rounded"
+      allowfullscreen
+      sandbox="allow-scripts allow-same-origin"
+    >
+    </iframe>
+  </div>
+</div>
