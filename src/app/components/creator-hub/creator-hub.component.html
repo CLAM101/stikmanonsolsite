@@ -1,10 +1,21 @@
 <div
   #memecenter
   name="memecenter"
-  class="flex flex-row w-full h-screen shadow-lg shadow-white backgroundImage"
+  class="flex flex-col h-screen w-full shadow-lg shadow-white relative overflow-hidden backgroundImage"
   id="memecenter"
   appIsInView
 >
+  <div class="absolute z-[-2] h-full w-full">
+    <div
+      class="w-full h-full absolute grid lg:grid-cols-5 xl:grid-cols-5 xxl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 gap-1"
+    >
+      <div
+        *ngFor="let imag of backGroundImages"
+        class="bg-contain bg-inherit aspect-square"
+        [ngStyle]="{ 'background-image': 'url(' + imag + ')' }"
+      ></div>
+    </div>
+  </div>
   <div class="w-full flex flex-col h-full justify-center items-center">
     <div class="h-10% w-full flex felx-col justify-start">
       <h1 class="large-heading-text font-norwester font-bold p-5">
@@ -22,12 +33,6 @@
       <div
         class="w-2/3 h-full flex flex-col justify-evenly items-center text-center overflow-y-scroll no-scrollbar"
       >
-        <p class="medium-heading-text font-norwester p-5 leading-[3rem]">
-          Aight, listen up—St1kman’s been runnin' this game since cavemen were
-          scratchin' tales on walls. From fire-lit stories to flipbooks in
-          classrooms, and now, straight into the digital age. St1kman’s seen it
-          all, and guess what? He ain’t goin' nowhere.
-        </p>
         <p class="medium-heading-text font-norwester p-5 leading-[3rem]">
           Here's the deal: 🎯 You got Nifty Island, ANY gaming platform? Bring
           your St1kman there, show your skills, and get rewarded. We're talkin'
@@ -59,7 +64,9 @@
   appIsInView
 >
   <div class="flex flex-col w-full h-10%">
-    <h1 class="large-heading-text font-norwester p-5">2D St1kman Editor</h1>
+    <h1 class="large-heading-text font-norwester p-5">
+      2D Meme Maker and Editor
+    </h1>
   </div>
   <div
     class="flex flex-col h-90% items-center justify-center text-center w-full overflow-y-scroll no-scrollbar"

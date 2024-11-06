@@ -52,6 +52,12 @@ export class CreatorHubComponent {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman-final.psd?alt=media&token=1f4ac022-26e1-4a47-8dc5-489590d9b609',
     },
     {
+      name: 'St1kman vrm',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2FVRM-downlaod-logo.webp?alt=media&token=6610526c-22be-42ab-ae91-5953daab6745',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FStikman.vrm?alt=media&token=2fd9aa12-9abf-4e5a-8d64-a56042d69fec',
+    },
+    {
       name: 'St1kman fbx',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
@@ -135,6 +141,19 @@ export class CreatorHubComponent {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fst1kman-cereal-meme.png?alt=media&token=ab2aa02a-abc4-4c61-81cb-3bf2d241d025',
       name: 'Image 1',
     },
+  ];
+
+  backGroundImages = [
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fexpression%20(1).jpg?alt=media&token=4f971d22-b48c-4e0c-b642-866f56a76e8c',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fheadshot%202.png?alt=media&token=e654a772-5286-4b90-9cd4-ece4d5dc2f5f',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fnofty%20game%20play.png?alt=media&token=6868b65c-a5fe-4403-a28b-919d7338f9cb',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fold%20school%20stickman.jpg?alt=media&token=3547f3d6-7c5b-4ee4-9939-550cac62f4e3',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fskinny%20stickman.jpg?alt=media&token=172f45bf-8b1f-4f23-a2d0-fa7c040838e6',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2FStikman_hat_blunt.png?alt=media&token=ec8a7064-5f93-423e-8db2-4ba870ecfb73',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fimage2.png?alt=media&token=40a3b360-c553-41e3-86e5-d5f5ccef91c5',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fexpression%20(1).jpg?alt=media&token=4f971d22-b48c-4e0c-b642-866f56a76e8c',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2FUntitled_image_15.png?alt=media&token=ff5fe5dd-ce38-402d-9676-17481dd2705d',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fimage.png?alt=media&token=42565eb4-d09f-4f5b-beff-a455661f63d4',
   ];
 
   ngOnInit() {
