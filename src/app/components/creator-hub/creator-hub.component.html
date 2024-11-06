@@ -1,7 +1,7 @@
 <div
   #memecenter
   name="memecenter"
-  class="flex flex-col h-screen w-full shadow-lg shadow-white relative overflow-hidden backgroundImage"
+  class="flex flex-col h-screen justify-center w-full shadow-lg shadow-white relative overflow-hidden backgroundImage"
   id="memecenter"
   appIsInView
 >
@@ -11,7 +11,7 @@
     >
       <div
         *ngFor="let imag of backGroundImages"
-        class="bg-contain bg-inherit aspect-square"
+        class="bg-contain bg-inherit aspect-square rounded-md"
         [ngStyle]="{ 'background-image': 'url(' + imag + ')' }"
       ></div>
     </div>

@@ -154,7 +154,7 @@
                 <h1
                   class="opacity-100 hover:opacity-50 transition-opacity large-heading-text"
                 >
-                  Socials
+                  Contact & Info
                 </h1>
               </button>
             </mat-menu>
@@ -237,7 +237,7 @@
               class="w-1/6% font-norwester medium-heading-text w-1/6"
             >
               <h1 class="opacity-100 hover:opacity-50 transition-opacity">
-                Socials
+                Contact & Info
               </h1>
             </button>
           </div>
@@ -457,12 +457,12 @@
               <div class="flex flex-col w-full items-center justify-center">
                 <a href="https://phantom.app/" target="_blank">
                   <img
-                    class="h-5vh w-15vh"
+                    class="h-5vh w-20vh"
                     src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2FPhantom-Logo-Purple.png?alt=media&token=bd77882e-548f-4ab4-b441-618ed9bc9a34"
                     alt=""
                 /></a>
 
-                <h1 class="font-norwester medium-heading-text p-5">
+                <h1 class="font-norwester small-heading-text p-5">
                   Create a wallet, we recommend Phantom Wallet.
                 </h1>
               </div>
@@ -474,14 +474,14 @@
         
         }"
             >
-              <h1 class="font-norwester medium-heading-text p-5">
+              <h1 class="font-norwester small-heading-text p-5">
                 Get some $SOL this can be done on andy major exchange like
                 Binance, Coinbase etc. Once you have purchased your $SOL send it
                 to the address of your newly created wallet.
               </h1>
             </div>
             <div
-              class="h-20% w-full shadow-md shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2500"
+              class="h-20% w-full shadow-md overflow-y-scroll no-scrollbar shadow-white border-4 rounded-lg bg-black flex flex-col justify-center items-center text-center -translate-x-130 duration-2500"
               [ngClass]="{
           'translate-x-0': inViews.howToBuy,
          
@@ -490,19 +490,19 @@
               <div class="flex flex-row w-full h-1/2 justify-center p-2">
                 <a href="https://jup.ag/" target="_blank">
                   <img
-                    class="h-10vh w-5vw"
+                    class="h-10vh w-20vh"
                     src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Flogowithtext-dark.svg?alt=media&token=77899e16-294f-48d0-b545-f9fa8da77c27"
                     alt=""
                 /></a>
                 <a href="https://raydium.io/swap/" target="_blank">
                   <div class="h-10vh w-5vw pl-16 flex flex-row">
                     <img
-                      class="h-10vh w-5vw pl-16"
+                      class="h-10vh w-[17vh] lg:pl-16"
                       src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fraydium-logo.webp?alt=media&token=3fe25628-07e7-426a-ab6c-fe11bcb08acb"
                       alt=""
                     />
                     <h1
-                      class="large-heading-text font-robotomonobold pt-5 pl-5"
+                      class="medium-heading-text font-robotomonobold pt-5 pl-5"
                     >
                       Raydium
                     </h1>
@@ -510,7 +510,7 @@
                 </a>
               </div>
               <div class="flex flex-col h-1/2 w-full">
-                <h1 class="font-norwester medium-heading-text p-5">
+                <h1 class="font-norwester small-heading-text p-5">
                   Go to the Jupiter or Raydium websites, connect your phantom
                   wallet, paste the address of $ST1K into the swap panel and
                   select $SOL as the other token to exchange.
@@ -524,7 +524,7 @@
           
         }"
             >
-              <h1 class="font-norwester medium-heading-text p-5">
+              <h1 class="font-norwester small-heading-text p-5">
                 Swap your $SOL for $ST1k and prepare for Valhalla! .
               </h1>
             </div>
@@ -534,12 +534,12 @@
         <div
           #socials
           name="socials"
-          class="flex w-full h-screen shadow-lg shadow-white backgroundImage"
+          class="flex flex-col w-full h-screen shadow-lg shadow-white backgroundImage"
           id="socials"
           appIsInView
           (inView)="inViewHandler($event, 'socials')"
         >
-          <div class="grid grid-cols-2 w-full h-full">
+          <div class="grid grid-cols-2 w-full h-80%">
             <div class="flex flex-col justify-center items-center">
               <a href="https://www.youtube.com/">
                 <img
@@ -576,6 +576,19 @@
                 />
               </a>
             </div>
+          </div>
+          <div
+            class="h-20% flex flex-col w-full justify-center items-center text-center"
+          >
+            <h1 class="medium-heading-text font-norwester p-5">
+              DISCLAIMER: Purchasing Crypto Currencies are subject to market
+              risks. Do your own research before purchasing any token. DO NOT
+              PURCHASE ANYTHING IF YOU ARE NOT 100% SURE WHAT YOUR DOING...The
+              people or the creators and content of this token or project are
+              not held responsible in any way for your loss or profit for that
+              matter. Everyone is free to use , download and create using
+              anything on this page.
+            </h1>
           </div>
         </div>
       </div>
