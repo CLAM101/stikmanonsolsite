@@ -55,11 +55,11 @@
   }
 
   .backgroundImage {
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.png?alt=media&token=6cacd35a-fe8f-447b-ad0c-c27b3ba2b221");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.webp?alt=media&token=05872f69-4d06-4b07-878e-27d5382aa74c");
   }
 
   .layered-background {
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.png?alt=media&token=6cacd35a-fe8f-447b-ad0c-c27b3ba2b221"),
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fbackground-purple.webp?alt=media&token=05872f69-4d06-4b07-878e-27d5382aa74c"),
       url("https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2Fdarker-token-background.webp?alt=media&token=1d1419c0-72bd-43a3-8e79-5cc08a36ca1d");
   }
 
