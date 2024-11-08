@@ -98,47 +98,47 @@ export class CreatorHubComponent {
 
   memeImages = [
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fcaveman-fucking-meme.png?alt=media&token=090c1bae-fe43-488d-8b7c-dd7912e649f6',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fdegen-gasses-purple.webp?alt=media&token=24c2fcd9-e342-47f3-88fe-91db7c4ad8bb',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-gasses-purple.png?alt=media&token=a3d5c094-cc8f-4b61-a433-3d76cc2f6bb5',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fdegen-glasses-orange.webp?alt=media&token=3032cfac-cf3e-4a5a-ba6f-a32d10643518',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdegen-glasses-orange.png?alt=media&token=c52bc7a3-9654-4c5c-8a42-d3a30bbf50b2',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fdrawing%20pad%20anime%20(1).webp?alt=media&token=d03cf98d-c81b-47f0-be14-d164480d5357',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Ffuck-bear-meme.png?alt=media&token=2c75db04-b8df-42cf-85ec-60a371994aa5',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fdrawing%20pad%20anime.webp?alt=media&token=1474b255-2e0c-472f-a916-2536d30f7366',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fgroup-photo-meme.png?alt=media&token=54397b6d-2d80-4f41-afb8-ae9d1d514156',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Ffuck-bear-meme.webp?alt=media&token=41635db8-53d6-442c-8b5f-9e5021adfe82',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fmeme2.png?alt=media&token=09e57602-e07e-460f-943c-4fcdee9e4165',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fgroup-photo-meme.webp?alt=media&token=90254cd2-ff3f-4001-a294-087def8e94ea',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fstrip-club-meme.png?alt=media&token=0798cde1-6d86-46c9-8781-bc9184da78e4',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fmeme2.webp?alt=media&token=dc296078-0ca8-4504-8c86-3d9f28acb442',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Ftrup-elon-meme.png?alt=media&token=0ca88d27-e1cc-4a91-ac87-6907fdc7986b',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fst1kman%20at%20trump%20biden.webp?alt=media&token=2a87b823-9f31-4228-b8e7-f04629a8b912',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fdrawing%20pad%20anime.png?alt=media&token=5a1fc072-53c7-476d-bb3c-dc9fa3e964e5',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fst1kman-cereal-meme.webp?alt=media&token=a74ae7f6-3216-4c63-bc96-545fbf9a5b83',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fst1kman%20at%20trump%20biden.jpg?alt=media&token=157dd5f2-c987-4f22-a8a9-923396b25c92',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fstrip-club-meme.webp?alt=media&token=aab585e5-93eb-4b81-a5fe-418f53d6f270',
       name: 'Image 1',
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fst1kman-cereal-meme.png?alt=media&token=ab2aa02a-abc4-4c61-81cb-3bf2d241d025',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Ftrup-elon-meme.webp?alt=media&token=2176e139-4330-44c0-ba37-74e13b70ab29',
       name: 'Image 1',
     },
   ];
