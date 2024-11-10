@@ -148,7 +148,8 @@ export class CreatorHubComponent {
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fnofty%20game%20play.png?alt=media&token=6868b65c-a5fe-4403-a28b-919d7338f9cb',
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fold%20school%20stickman.jpg?alt=media&token=3547f3d6-7c5b-4ee4-9939-550cac62f4e3',
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fskinny%20stickman.jpg?alt=media&token=172f45bf-8b1f-4f23-a2d0-fa7c040838e6',
-
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fimage-oprea.webp?alt=media&token=f95f4ea4-a9a5-4df0-b27b-01d683237f46',
+    'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fimage.webp?alt=media&token=ca4972c0-a022-4191-ad5d-c70af66a7f72',
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2FStikman_hat_blunt.png?alt=media&token=ec8a7064-5f93-423e-8db2-4ba870ecfb73',
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2Fimage2.png?alt=media&token=40a3b360-c553-41e3-86e5-d5f5ccef91c5',
     'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fcreator-hub-background%2FUntitled_image_15.png?alt=media&token=ff5fe5dd-ce38-402d-9676-17481dd2705d',

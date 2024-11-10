@@ -15,6 +15,7 @@ module.exports = {
       animation: {
         "infinite-scroll": "infinite-scroll 10s linear infinite",
         "vertical-scroll": "vertical-scroll 10s linear infinite",
+        "spin-slow": "spin 3s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
@@ -24,6 +25,10 @@ module.exports = {
         "vertical-scroll": {
           to: { transform: "translateY(0)" },
           from: { transform: "translateY(-100%)" },
+        },
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
       },
 
