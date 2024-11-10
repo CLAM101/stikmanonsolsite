@@ -16,6 +16,7 @@ module.exports = {
         "infinite-scroll": "infinite-scroll 10s linear infinite",
         "vertical-scroll": "vertical-scroll 10s linear infinite",
         "spin-slow": "spin 3s linear infinite",
+        dance: "dance 1s ease-in-out infinite",
       },
       keyframes: {
         "infinite-scroll": {
@@ -29,6 +30,12 @@ module.exports = {
         spin: {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
+        },
+        dance: {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg) scale(1)" },
+          "25%": { transform: "translateY(-10px) rotate(-5deg) scale(1.05)" },
+          "50%": { transform: "translateY(0) rotate(5deg) scale(0.95)" },
+          "75%": { transform: "translateY(-10px) rotate(-5deg) scale(1.05)" },
         },
       },
 
