@@ -198,8 +198,10 @@ export class MainPageComponent {
     video.volume = 0.2;
 
     this.playingVideo = true;
+    this.creatorHub.isPlayingVideo = true;
     video.play().catch((error) => {
       this.playingVideo = false;
+      this.creatorHub.isPlayingVideo = false;
       console.error('Video autoplay failed:', error);
     });
   }
@@ -208,6 +210,7 @@ export class MainPageComponent {
     const video = this.videoElement.nativeElement as HTMLVideoElement;
     video.pause();
     this.playingVideo = false;
+    this.creatorHub.isPlayingVideo = false;
   }
 
   playVoAudio() {

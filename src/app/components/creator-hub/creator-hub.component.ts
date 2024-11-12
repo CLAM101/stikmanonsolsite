@@ -31,6 +31,7 @@ export class CreatorHubComponent {
   photopeaURL!: SafeResourceUrl;
   showMemeEditor = false;
   isSmallScreen: boolean = false;
+  isPlayingVideo: boolean = false;
 
   assetDownLoadImages = [
     {
