@@ -499,7 +499,10 @@
          
         }"
             >
-              <div class="flex flex-row w-full h-1/2 justify-center p-2">
+              <div
+                class="flex flex-row w-full h-1/2 justify-center p-2"
+                *ngIf="!isSmallScreen"
+              >
                 <a href="https://jup.ag/" target="_blank">
                   <img
                     class="h-10vh w-20vh"
@@ -521,7 +524,10 @@
                   </div>
                 </a>
               </div>
-              <div class="flex flex-col h-1/2 w-full">
+              <div
+                class="flex flex-col h-1/2 w-full"
+                [ngClass]="{ 'h-full': isSmallScreen }"
+              >
                 <h1 class="font-norwester small-heading-text p-5">
                   Go to the Jupiter or Raydium websites, connect your phantom
                   wallet, paste the address of $ST1K into the swap panel and
