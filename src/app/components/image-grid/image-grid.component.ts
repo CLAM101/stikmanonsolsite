@@ -25,6 +25,12 @@ export class ImageGridComponent {
     this.showNamesIn = value;
   }
 
+  @Input() set inoutOverFlowYScroll(value: boolean) {
+    this.overFlowYScroll = value;
+  }
+
+  overFlowYScroll: boolean = true;
+
   // Array of images with their respective URLs and file names
 
   constructor(private sanitizer: DomSanitizer) {} //

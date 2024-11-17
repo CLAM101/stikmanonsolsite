@@ -102,6 +102,7 @@
     <h1 class="large-heading-text font-norwester p-5">Download Center</h1>
   </div>
   <div
+    *ngIf="!this.isSmallScreen"
     class="w-full flex md:flex-row sm:flex-col xs:flex-col h-[82%] sm:overflow-y-scroll xs:overflow-y-scroll md:overflow-hidden no-scrollbar"
   >
     <div class="md:w-1/2 sm:w-full flex flex-col h-100vh">
@@ -122,6 +123,31 @@
       <app-image-grid
         [showNames]="false"
         [imagesInput]="memeImages"
+      ></app-image-grid>
+    </div>
+  </div>
+  <div
+    *ngIf="this.isSmallScreen"
+    class="w-full flex flex-col h-auto overflow-y-scroll no-scrollbar gap-y-5"
+  >
+    <div class="w-full flex flex-col h-auto">
+      <h1 class="medium-heading-text font-norwester p-5">
+        Click To Download Memes
+      </h1>
+      <app-image-grid
+        [showNames]="false"
+        [imagesInput]="memeImages"
+        [inoutOverFlowYScroll]="false"
+      ></app-image-grid>
+    </div>
+    <div class="w-full flex flex-col h-auto">
+      <h1 class="medium-heading-text font-norwester p-5">
+        Click To Download Creator Assets
+      </h1>
+      <app-image-grid
+        [showNames]="true"
+        [imagesInput]="assetDownLoadImages"
+        [inoutOverFlowYScroll]="false"
       ></app-image-grid>
     </div>
   </div>
