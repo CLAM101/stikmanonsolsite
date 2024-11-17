@@ -1,12 +1,12 @@
 <div
-  class="h-screen w-full flex flex-col justify-start overflow-y-scroll no-scrollbar"
+  class="w-full flex flex-col justify-start overflow-y-scroll no-scrollbar relative"
   [ngClass]="{ 'overflow-y-scroll': overFlowYScroll }"
 >
   <div
-    class="w-fit h-fit grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 xxs:grid-cols-2"
+    class="w-fit h-auto grid md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-2 xxs:grid-cols-2 relative"
   >
     <div
-      class="items-center flex flex-col justify-evenly p-8 md:h-25vh md:w-fit rounded-lg"
+      class="items-center flex flex-col justify-evenly p-8 md:h-25vh md:w-fit rounded-lg relative"
       *ngFor="let image of images"
     >
       <img

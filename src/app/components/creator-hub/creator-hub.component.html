@@ -128,12 +128,12 @@
   </div>
   <div
     *ngIf="this.isSmallScreen"
-    class="w-full flex flex-col h-auto overflow-y-scroll no-scrollbar"
+    class="w-full flex flex-col h-auto overflow-y-scroll no-scrollbar relative"
   >
     <h1 class="small-heading-text font-norwester p-5">
       Please scroll to view more content
     </h1>
-    <div class="w-full flex flex-col h-auto pb-10">
+    <div class="w-full flex flex-col relative">
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Memes
       </h1>
@@ -143,7 +143,7 @@
         [inoutOverFlowYScroll]="false"
       ></app-image-grid>
     </div>
-    <div class="w-full flex flex-col h-auto">
+    <div class="w-full flex flex-col relative">
       <h1 class="medium-heading-text font-norwester p-5">
         Click To Download Creator Assets
       </h1>

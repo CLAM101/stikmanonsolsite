@@ -117,6 +117,24 @@ export class CreatorHubComponent {
 
   memeImages = [
     {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FGM.png?alt=media&token=6eb757b6-a976-4496-91ff-9291f2f1b0ca',
+      name: 'GM',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2FGM.webp?alt=media&token=60768280-caf3-4249-b3d6-302f5886ca49',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FGN.png?alt=media&token=921fc4ec-85d5-49df-88a3-824cd8baae33',
+      name: 'GN',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2FGN.webp?alt=media&token=cc5e9b4f-1b97-4338-b421-eb6ddee112aa',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FLFG.png?alt=media&token=8408ed8c-5e03-400b-9ec7-12f48d51a196',
+      name: 'LFG',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2FLFG.webp?alt=media&token=db6342b4-a7c1-4dc7-bf3e-1cf59f5c0704',
+    },
+    {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fdegen-gasses-purple.webp?alt=media&token=24c2fcd9-e342-47f3-88fe-91db7c4ad8bb',
       name: 'Image 1',
     },
