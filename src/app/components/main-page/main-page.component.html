@@ -440,7 +440,13 @@
           appIsInView
           (inView)="inViewHandler($event, 'games')"
         >
-          <app-game-embed></app-game-embed>
+          <app-game-embed *ngIf="!isSmallScreen"></app-game-embed>
+
+          <div class="h-full w-full flex flex-col justify-center items-center">
+            <h1 class="font-norwester large-heading-text" *ngIf="isSmallScreen">
+              Please visit site on Desktop to Play Games
+            </h1>
+          </div>
         </div>
         <div
           #howtobuy
