@@ -103,27 +103,32 @@
   </div>
   <div
     *ngIf="!this.isSmallScreen"
-    class="w-full flex md:flex-row sm:flex-col xs:flex-col h-[82%] sm:overflow-y-scroll xs:overflow-y-scroll md:overflow-hidden no-scrollbar"
+    class="w-full flex flex-col overflow-y-scroll no-scrollbar"
   >
-    <div class="md:w-1/2 sm:w-full flex flex-col h-100vh">
-      <h1 class="medium-heading-text font-norwester p-5">
-        Click To Download Creator Assets
-      </h1>
-      <app-image-grid
-        [showNames]="true"
-        [imagesInput]="assetDownLoadImages"
-      ></app-image-grid>
-    </div>
-    <div
-      class="md:w-1/2 sm:pt-8 xs:pt-8 md:pt-0 sm:w-full flex flex-col h-full"
-    >
-      <h1 class="medium-heading-text font-norwester p-5">
-        Click To Download Memes
-      </h1>
-      <app-image-grid
-        [showNames]="false"
-        [imagesInput]="memeImages"
-      ></app-image-grid>
+    <h1 class="small-heading-text font-norwester p-5">
+      Please scroll to view more content
+    </h1>
+    <div class="flex flex-row h-[82%]">
+      <div class="md:w-1/2 sm:w-full flex flex-col h-100vh">
+        <h1 class="medium-heading-text font-norwester p-5">
+          Click To Download Creator Assets
+        </h1>
+        <app-image-grid
+          [showNames]="true"
+          [imagesInput]="assetDownLoadImages"
+        ></app-image-grid>
+      </div>
+      <div
+        class="md:w-1/2 sm:pt-8 xs:pt-8 md:pt-0 sm:w-full flex flex-col h-full"
+      >
+        <h1 class="medium-heading-text font-norwester p-5">
+          Click To Download Memes
+        </h1>
+        <app-image-grid
+          [showNames]="false"
+          [imagesInput]="memeImages"
+        ></app-image-grid>
+      </div>
     </div>
   </div>
   <div
