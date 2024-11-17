@@ -144,10 +144,7 @@ export class CreatorHubComponent {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fmeme2.webp?alt=media&token=dc296078-0ca8-4504-8c86-3d9f28acb442',
       name: 'Image 1',
     },
-    {
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fst1kman%20at%20trump%20biden.webp?alt=media&token=2a87b823-9f31-4228-b8e7-f04629a8b912',
-      name: 'Image 1',
-    },
+
     {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fst1kman-cereal-meme.webp?alt=media&token=a74ae7f6-3216-4c63-bc96-545fbf9a5b83',
       name: 'Image 1',
