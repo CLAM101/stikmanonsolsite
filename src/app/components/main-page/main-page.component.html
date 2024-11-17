@@ -375,24 +375,37 @@
               class="w-2/3 h-95% flex flex-col justify-evenly items-center text-center overflow-y-scroll no-scrollbar"
             >
               <div class="h-full w-full flex flex-col justify-evenly">
-                <p class="medium-heading-text font-norwester">
+                <p
+                  class="md:medium-heading-text xs:small-heading-text font-norwester"
+                >
                   5% of Supply – Pumpin’ St1kman IP We’re locking in 5% of the
                   supply to launch St1kman into the stratosphere. Expect viral
                   drops, killer collabs, wild promos – whatever it takes to make
-                  this thing explode. We’re talking grassroots hype, meme
-                  squads, influencer shoutouts, the works. You’ll be spotting
-                  St1kman in places you’d never imagine – from street art to
-                  digital screens, he’s everywhere.
+                  this thing explode.
                 </p>
-                <p class="medium-heading-text font-norwester">
+                <p
+                  class="md:medium-heading-text xs:small-heading-text font-norwester"
+                >
+                  We’re talking grassroots hype, meme squads, influencer
+                  shoutouts, the works. You’ll be spotting St1kman in places
+                  you’d never imagine – from street art to digital screens, he’s
+                  everywhere.
+                </p>
+                <p
+                  class="md:medium-heading-text xs:small-heading-text font-norwester"
+                >
                   5% of Supply – Creators Collab Fund Time to get the creators
                   in on the action. Another 5% is stashed, ready for epic
                   collabs with top creators, meme legends, and influencers
-                  who’ll push St1kman to the forefront. Maybe even throw in a
-                  hardcore challenge where $St1k is the currency for the whole
-                  St1kman universe. You’ll see him repped on YouTube, Twitch,
-                  TikTok – St1kman’s about to become the undisputed king of
-                  crypto culture.
+                  who’ll push St1kman to the forefront.
+                </p>
+                <p
+                  class="md:medium-heading-text xs:small-heading-text font-norwester"
+                >
+                  Maybe even throw in a hardcore challenge where $St1k is the
+                  currency for the whole St1kman universe. You’ll see him repped
+                  on YouTube, Twitch, TikTok – St1kman’s about to become the
+                  undisputed king of crypto culture.
                 </p>
               </div>
             </div>
@@ -409,7 +422,7 @@
           <div class="w-full h-10% font-norwester large-heading-text p-5">
             <h1>Roadmap</h1>
           </div>
-          <div class="w-full h-90% grid grid-cols-2">
+          <div *ngIf="!isSmallScreen" class="w-full h-90% grid grid-cols-2">
             <div
               *ngFor="let x of roadMapPanels"
               class="flex flex-col justify-center items-center"
@@ -425,6 +438,28 @@
                 </h2>
                 <img
                   class="h-30vh w-30vh animate-spin-slow"
+                  [src]="x.imgSrc"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div *ngIf="isSmallScreen" class="w-full h-90% grid grid-cols-1">
+            <div
+              *ngFor="let x of roadMapPanels"
+              class="flex flex-col justify-center items-center"
+            >
+              <div
+                class="h-90% w-60% shadow-md border-4 border-white rounded-full bg-black flex flex-col justify-center items-center"
+              >
+                <h1 class="paragraph-text font-norwester">
+                  {{ x.title }}
+                </h1>
+                <h2 class="paragraph-text font-norwester">
+                  {{ x.content }}
+                </h2>
+                <img
+                  class="h-15vh w-15vh animate-spin-slow"
                   [src]="x.imgSrc"
                   alt=""
                 />
@@ -557,7 +592,7 @@
           appIsInView
           (inView)="inViewHandler($event, 'socials')"
         >
-          <div class="grid grid-cols-2 w-full h-80%">
+          <div *ngIf="!isSmallScreen" class="grid grid-cols-2 w-full h-80%">
             <div class="flex flex-col justify-center items-center">
               <a href="https://www.youtube.com/@St1kmanSol">
                 <img
@@ -595,10 +630,53 @@
               </a>
             </div>
           </div>
+
+          <div
+            *ngIf="isSmallScreen"
+            class="flex flex-col justify-evenly w-full h-80%"
+          >
+            <div class="flex flex-col justify-center items-center pb-5">
+              <a href="https://www.youtube.com/@St1kmanSol">
+                <img
+                  class="h-10vh w-25vh"
+                  src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fyt_logo_mono_dark.png?alt=media&token=1e63ea69-0012-4499-8c6b-fbbb7d75ac1c"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <a href="https://x.com/ST1K_Man">
+                <img
+                  class="h-15vh w-15vh"
+                  src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Flogo-white.png?alt=media&token=c59a54fc-66a2-4efd-b20a-60cc5906a229"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <a href="https://www.tiktok.com/@st1kman.sol">
+                <img
+                  class="h-15vh w-25vh"
+                  src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2FTikTok-logo-CMYK-Horizontal-white-simplified.png?alt=media&token=3f87680e-aa84-405c-9e52-ed193bba4a92"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <a href="https://t.me/+6gy-GCMQGVhkYTdh">
+                <img
+                  class="h-15vh w-15vh"
+                  src="https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2FLogo.svg?alt=media&token=d1dc91e9-f3f3-4d16-a127-8613eb0b5dd6"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+
           <div
             class="h-20% flex flex-col w-full justify-center items-center text-center"
           >
-            <h1 class="small-heading-text font-norwester p-5">
+            <h1 class="md:small-heading-text font-norwester paragraph-text p-5">
               DISCLAIMER: Purchasing Crypto Currencies are subject to market
               risks. Do your own research before purchasing any token. DO NOT
               PURCHASE ANYTHING IF YOU ARE NOT 100% SURE WHAT YOUR DOING...The

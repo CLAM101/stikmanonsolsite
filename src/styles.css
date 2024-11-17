@@ -76,7 +76,7 @@
   }
 
   .paragraph-text {
-    @apply font-black  text-black;
+    @apply text-white;
   }
 
   .border-background {
