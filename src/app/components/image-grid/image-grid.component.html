@@ -10,7 +10,7 @@
       *ngFor="let image of images"
     >
       <img
-        (click)="downloadImage(image.url, image.name)"
+        (click)="downloadImage(image.url, image.name, image.type || '')"
         class="rounded-lg"
         type="button"
         [src]="image.imgSrc || image.url"

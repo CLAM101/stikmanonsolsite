@@ -36,40 +36,46 @@ export class CreatorHubComponent {
   assetDownLoadImages = [
     {
       name: 'St1kman Gangster glb',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2FStikman_hat_blunt.png?alt=media&token=2c027eb6-b25d-4013-9639-8320d6b2b881',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20Gangsta%20Cut.glb?alt=media&token=e2039459-c9b5-44a3-99d9-7c63cd23840f',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman%20Gangsta%20Cut.glb?alt=media&token=2d86530c-4786-49d9-ae6a-9bb69ac8c344',
     },
     {
       name: 'St1kman Mesh glb',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fother%2FSt1kman%20mesh%20Final.png?alt=media&token=90b6da8c-8115-4cc8-8a83-1aceb3f58529',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20mesh%20Final.glb?alt=media&token=9fee6cd6-64c4-42d1-a7d0-8dee9f181c8e',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman%20mesh%20Final.glb?alt=media&token=31746853-64d9-46bf-adc8-f8b5ee08d0a3',
     },
     {
       name: 'St1kman psd',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Fst1kman-variations%2Fhey%20jump.png?alt=media&token=06a25e60-ba90-4048-9271-bb0048719dca',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman-final.psd?alt=media&token=1f4ac022-26e1-4a47-8dc5-489590d9b609',
     },
     {
       name: 'St1kman vrm',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2FVRM-downlaod-logo.webp?alt=media&token=6610526c-22be-42ab-ae91-5953daab6745',
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FStikman.vrm?alt=media&token=2fd9aa12-9abf-4e5a-8d64-a56042d69fec',
     },
     {
       name: 'St1kman fbx',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kman%20fbx%20Final.fbx?alt=media&token=dc8ea0e1-2c5a-4b76-9688-c94bb7e183ff',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kman%20fbx%20Final.fbx?alt=media&token=2263b11f-ed95-4f46-9c6e-2d93d704bcf7',
     },
 
     {
       name: 'St1kman Gangsta fbx',
+      type: 'download',
       imgSrc:
         'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/images%2Flogos%2Fdownload-audio-logo.webp?alt=media&token=36e4a6a5-fbfd-448d-9de5-f97ac00f4d13',
-      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/St1kmangangsta%20fbx%20Cut.fbx?alt=media&token=3ebd8da7-8438-475a-bc4a-ffb6930599f9',
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2FSt1kmangangsta%20fbx%20Cut.fbx?alt=media&token=13dfd6a0-e72c-4283-ac33-100b5264ec07',
     },
     {
       name: 'St1kman VO',
@@ -116,6 +122,30 @@ export class CreatorHubComponent {
   ];
 
   memeImages = [
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FStickman_3.mp4?alt=media&token=bb765d5b-a68f-436d-8633-05528a644b5e',
+      name: 'cashMoney',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fcash-money.webp?alt=media&token=e8e442fd-ed44-442d-81c5-4c4d10e28220',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FStickman_4.mp4?alt=media&token=b4a8fc1b-8367-4284-83e5-fc6d54c444c8',
+      name: 'cavemen',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fcavemen.webp?alt=media&token=5bb217ee-1965-4398-84b4-3b4a150ccec8',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FStickman_6.mp4?alt=media&token=f5e328b1-571e-41c2-b5d7-b4152d1541eb',
+      name: 'heart',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fheart-stikman.webp?alt=media&token=6c1cba12-8f2b-444e-b401-c786f7433f30',
+    },
+    {
+      url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FStickman_5.mp4?alt=media&token=973d905b-fd4d-4c16-ab17-63675af1dcb6',
+      name: 'pump',
+      imgSrc:
+        'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2Fscaled%2Fpump.webp?alt=media&token=518fb988-e04f-4bb2-a42b-25bde1bf1ae5',
+    },
     {
       url: 'https://firebasestorage.googleapis.com/v0/b/st1kmanonsol.appspot.com/o/Download%20Assets%2Fmemes%2FGM.png?alt=media&token=6eb757b6-a976-4496-91ff-9291f2f1b0ca',
       name: 'GM',

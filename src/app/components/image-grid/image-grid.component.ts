@@ -5,6 +5,7 @@ interface Image {
   name: string;
   url: string;
   imgSrc?: string;
+  type?: string;
 }
 @Component({
   selector: 'app-image-grid',
@@ -42,9 +43,16 @@ export class ImageGridComponent {
   downloadFile() {}
 
   // Method to download an image
-  downloadImage(url: string, name: string) {
+  downloadImage(url: string, name: string, type?: string) {
     const link = document.createElement('a');
     link.href = url;
+    if (type === 'download') {
+      link.click();
+      return;
+    }
+
+    link.target = '_blank';
+
     link.download = name;
     link.click();
   }
