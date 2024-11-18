@@ -446,14 +446,14 @@
               <div
                 class="h-90% w-60% shadow-md border-4 border-white rounded-full bg-black flex flex-col justify-center items-center"
               >
-                <h1 class="paragraph-text font-norwester">
+                <h1 class="text-white text-sm font-norwester">
                   {{ x.title }}
                 </h1>
-                <h2 class="paragraph-text font-norwester">
+                <h2 class="text-white text-sm font-norwester">
                   {{ x.content }}
                 </h2>
                 <img
-                  class="h-15vh w-15vh animate-spin-slow"
+                  class="h-[12vh] w-[12vh] animate-spin-slow"
                   [src]="x.imgSrc"
                   alt=""
                 />
@@ -558,9 +558,23 @@
                 [ngClass]="{ 'h-full': isSmallScreen }"
               >
                 <h1 class="font-norwester small-heading-text p-5">
-                  Go to the Jupiter or Raydium websites, connect your phantom
-                  wallet, paste the address of $ST1K into the swap panel and
-                  select $SOL as the other token to exchange.
+                  Go to the
+                  <a
+                    href="https://raydium.io/swap/"
+                    class="text-solanaPurple"
+                    target="_blank"
+                    >Raydium</a
+                  >
+                  or
+                  <a
+                    href="https://jup.ag/"
+                    class="text-solanaPurple"
+                    target="_blank"
+                    >Jupiter</a
+                  >
+                  websites, connect your phantom wallet, paste the address of
+                  $ST1K into the swap panel and select $SOL as the other token
+                  to exchange.
                 </h1>
               </div>
             </div>

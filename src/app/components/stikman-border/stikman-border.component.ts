@@ -12,7 +12,7 @@ export class StikmanBorderComponent {
   stickmen: string[] = [];
   horizontal!: boolean;
   constructor() {
-    this.stickmen = this.generateStickmanArray(8);
+    this.stickmen = this.generateStickmanArray(3);
   }
 
   stikimageArray: string[] = [
