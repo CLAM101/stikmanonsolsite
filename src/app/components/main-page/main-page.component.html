@@ -290,15 +290,25 @@
               <div
                 class="w-full h-2/6 flex flex-col items-center justify-center"
               >
-                <h2>
+                <div
+                  class="flex flex-row w-full h-1/2 justify-center items-center"
+                >
                   <a
+                    class="flex flex-row justify-center items-center"
                     href="https://dexscreener.com/solana/hjidpdrr4uw97ogrhkxza7uyg7ruk2gsh9apg56jpbfc"
-                    ><h2 class="text-3xl font-norwester text-solanaPurple">
-                      Dex Screener
-                    </h2></a
                   >
-                </h2>
-                <h2 class="small-heading-text font-norwester">
+                    <img
+                      class="h-[8vh] w-[8vh] pt-5"
+                      src="../../../assets/images/dex-screener.svg"
+                      alt=""
+                    />
+                    <h1 class="medium-heading-text font-norwester pt-5">
+                      Dex Screener
+                    </h1></a
+                  >
+                </div>
+
+                <h2 class="small-heading-text font-norwester p-5">
                   Token Address: 4jMXPUb1csqxMGzpqAQSod4qGdueaN8YHMR2TYgVpump
                 </h2>
               </div>
@@ -306,11 +316,11 @@
 
             <div
               *ngIf="!isSmallScreen"
-              class="flex flex-row w-full justify-between h-45vh"
+              class="flex flex-row w-full justify-between h-40vh"
             >
               <div
-                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-45vh min-w-50vh"
-                [ngClass]="{ 'translate-y-5': inViews.home }"
+                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-1000 h-35vh min-w-40vh"
+                [ngClass]="{ 'translate-y-0': inViews.home }"
               >
                 <img
                   [ngClass]="{ 'animate-dance': playingVideo }"
@@ -320,7 +330,7 @@
                 />
               </div>
               <div
-                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-2000 h-45vh min-w-50vh"
+                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-2000 h-35vh min-w-40vh"
                 [ngClass]="{ 'translate-y-5': inViews.home }"
               >
                 <img
@@ -331,7 +341,7 @@
                 />
               </div>
               <div
-                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-3000 h-45vh min-w-50vh"
+                class="flex flex-col justify-center text-center translate-y-40 align-middle items-center duration-3000 h-35vh min-w-40vh"
                 [ngClass]="{ 'translate-y-5': inViews.home }"
               >
                 <img
@@ -345,10 +355,10 @@
 
             <div
               *ngIf="isSmallScreen"
-              class="flex flex-row w-full justify-center items-center h-45vh"
+              class="flex flex-row w-full justify-center items-center h-40vh"
             >
               <div
-                class="flex flex-col justify-center text-center align-middle items-center h-45vh min-w-50vh animate-dance"
+                class="flex flex-col justify-center text-center align-middle items-center h-35vh min-w-40vh animate-dance"
               >
                 <img
                   class="w-full h-full"
