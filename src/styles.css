@@ -64,15 +64,15 @@
   }
 
   .large-heading-text {
-    @apply select-none  font-black  text-white;
+    @apply font-black  text-white;
   }
 
   .medium-heading-text {
-    @apply select-none text-3xl  text-white;
+    @apply text-3xl  text-white;
   }
 
   .small-heading-text {
-    @apply select-none text-2xl text-white;
+    @apply text-2xl text-white;
   }
 
   .paragraph-text {
@@ -112,11 +112,11 @@
       @apply text-lg;
     }
     .medium-heading-text {
-      @apply select-none text-lg font-black;
+      @apply text-lg font-black;
     }
 
     .small-heading-text {
-      @apply select-none text-xs font-black;
+      @apply text-xs font-black;
     }
     .paragraph-text {
       @apply text-3xs;
@@ -131,10 +131,10 @@
       @apply text-2xl;
     }
     .medium-heading-text {
-      @apply select-none text-lg font-black;
+      @apply text-lg font-black;
     }
     .small-heading-text {
-      @apply select-none text-xs font-black;
+      @apply text-xs font-black;
     }
     .paragraph-text {
       @apply text-3xs;
@@ -146,11 +146,11 @@
       @apply text-3xl;
     }
     .medium-heading-text {
-      @apply select-none text-xl font-black;
+      @apply text-xl font-black;
     }
 
     .small-heading-text {
-      @apply select-none text-base font-black;
+      @apply text-base font-black;
     }
     .paragraph-text {
       @apply text-sm;
@@ -162,11 +162,11 @@
       @apply text-4xl;
     }
     .medium-heading-text {
-      @apply select-none text-2xl font-black;
+      @apply text-2xl font-black;
     }
 
     .small-heading-text {
-      @apply select-none text-lg font-black;
+      @apply text-lg font-black;
     }
     .paragraph-text {
       @apply text-base;
@@ -178,11 +178,11 @@
       @apply text-5xl;
     }
     .medium-heading-text {
-      @apply select-none text-3xl font-black;
+      @apply text-3xl font-black;
     }
 
     .small-heading-text {
-      @apply select-none text-xl font-black;
+      @apply text-xl font-black;
     }
     .paragraph-text {
       @apply text-base;
@@ -194,11 +194,11 @@
       @apply text-6xl;
     }
     .medium-heading-text {
-      @apply select-none text-3xl font-black;
+      @apply text-3xl font-black;
     }
 
     .small-heading-text {
-      @apply select-none text-xl font-black;
+      @apply text-xl font-black;
     }
     .paragraph-text {
       @apply text-base;
